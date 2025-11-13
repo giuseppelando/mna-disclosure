@@ -1,0 +1,23 @@
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+renv/library/
+
+# targets
+/_targets/
+logs/
+
+# output artefacts
+/output/*.pdf
+/output/*.docx
+
+# data (mai su Git)
+data/raw/
+data/interim/
+data/processed/
+
+# credentials & config
+.env
+config/paths.yml
