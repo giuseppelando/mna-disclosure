@@ -1,23 +1,56 @@
-# R
+# ============================================
+# R / RStudio junk
+# ============================================
 .Rproj.user/
 .Rhistory
 .RData
 .Ruserdata
+
+# Renv local library
 renv/library/
 
-# targets
+# ============================================
+# Targets build system (if used)
+# ============================================
 /_targets/
 logs/
 
-# output artefacts
-/output/*.pdf
-/output/*.docx
+# ============================================
+# Output artefacts (PDF, Word, etc.)
+# ============================================
+output/*.pdf
+output/*.docx
+output/*.html
 
-# data (mai su Git)
-data/raw/
-data/interim/
+# ============================================
+# DATA: policy per questo progetto
+# - Versioniamo tutto ciò che è leggero e utile 
+#   (SDC CSV, CIK mappings, JSON SEC submissions,
+#    dataset intermedi tipo deals_with_cik.csv)
+# - NON versioniamo i filings HTML (pesanti)
+# ============================================
+
+# NON commitare i filings SEC HTML (possono diventare giganti)
+data/raw/filings/
+
+# Non commitare i dataset finali già processati (ricostruibili)
 data/processed/
 
-# credentials & config
+# Permettiamo invece:
+# data/raw/*.csv              ← OK
+# data/interim/*.csv          ← OK
+# data/interim/submissions_cache/*.json ← OK
+# data/example/*              ← OK
+# Quindi NON ignoriamo le cartelle:
+!data/raw/
+!data/interim/
+!data/example/
+
+# Ma ignoriamo specificatamente solo i HTML
+data/**/*.html
+
+# ============================================
+# Credentials & private configs
+# ============================================
 .env
 config/paths.yml
