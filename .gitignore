@@ -54,3 +54,26 @@ data/**/*.html
 # ============================================
 .env
 config/paths.yml
+
+# ============================================
+# System files
+# ============================================
+.DS_Store
+Thumbs.db
+*.log
+*~
+
+# ============================================
+# Output folders (regenerate from code)
+# ============================================
+output/tables/*
+output/figures/*
+!output/tables/.gitkeep
+!output/figures/.gitkeep
+
+# ============================================
+# Reports cache (if using Rmarkdown)
+# ============================================
+reports/*_cache/
+reports/*_files/
+
