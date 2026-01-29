@@ -1,0 +1,70 @@
+{
+  "cik": "0002076975",
+  "entityType": "other",
+  "sic": "7374",
+  "sicDescription": "Services-Computer Processing & Data Preparation",
+  "ownerOrg": "06 Technology",
+  "insiderTransactionForOwnerExists": 0,
+  "insiderTransactionForIssuerExists": 0,
+  "name": "Braiin Ltd",
+  "tickers": "BRAI",
+  "exchanges": null,
+  "ein": "000000000",
+  "lei": {},
+  "description": "",
+  "website": "",
+  "investorWebsite": "",
+  "category": "",
+  "fiscalYearEnd": "1231",
+  "stateOfIncorporation": "C3",
+  "stateOfIncorporationDescription": "Australia",
+  "addresses": {
+    "mailing": {
+      "street1": "83 ROKEBY ROAD",
+      "street2": {},
+      "city": "SUBIACO",
+      "stateOrCountry": {},
+      "zipCode": "6008",
+      "stateOrCountryDescription": {},
+      "isForeignLocation": 1,
+      "foreignStateTerritory": "WESTERN AUSTRALIA",
+      "country": "Australia",
+      "countryCode": "C3"
+    },
+    "business": {
+      "street1": "83 ROKEBY ROAD",
+      "street2": {},
+      "city": "SUBIACO",
+      "stateOrCountry": {},
+      "zipCode": "6008",
+      "stateOrCountryDescription": {},
+      "isForeignLocation": 1,
+      "foreignStateTerritory": "WESTERN AUSTRALIA",
+      "country": "Australia",
+      "countryCode": "C3"
+    }
+  },
+  "phone": "312-953-0086",
+  "flags": "",
+  "formerNames": [],
+  "filings": {
+    "recent": {
+      "accessionNumber": ["0001493152-26-003748", "0001493152-26-001917", "0001493152-25-027173", "0001493152-25-021436", "0001493152-25-015031", "0001213900-25-063757"],
+      "filingDate": ["2026-01-27", "2026-01-13", "2025-12-11", "2025-11-10", "2025-09-26", "2025-07-14"],
+      "reportDate": ["", "", "", "", "", ""],
+      "acceptanceDateTime": ["2026-01-27T13:43:58.000Z", "2026-01-13T01:02:38.000Z", "2025-12-11T14:02:50.000Z", "2025-11-10T14:00:52.000Z", "2025-09-26T01:58:45.000Z", "2025-07-14T20:56:13.000Z"],
+      "act": ["34", "33", "33", "33", "33", "33"],
+      "form": ["8-A12B", "F-1/A", "F-1/A", "F-1", "DRS/A", "DRS"],
+      "fileNumber": ["001-43079", "333-291410", "333-291410", "333-291410", "377-08208", "377-08208"],
+      "filmNumber": ["26563915", "26528187", "251563659", "251464677", "251345290", "251122283"],
+      "items": ["", "", "", "", "", ""],
+      "core_type": ["8-A12B", "F-1/A", "F-1/A", "F-1", "DRS/A", "DRS"],
+      "size": [25261, 64960844, 64922557, 23156843, 22853834, 48001286],
+      "isXBRL": [0, 0, 0, 1, 0, 0],
+      "isInlineXBRL": [0, 0, 0, 1, 0, 0],
+      "primaryDocument": ["form8-a12b.htm", "formf-1a.htm", "formf-1a.htm", "formf-1.htm", "filename1.htm", "filename1.htm"],
+      "primaryDocDescription": ["8-A12B", "F-1/A", "F-1/A", "F-1", "", ""]
+    },
+    "files": []
+  }
+}

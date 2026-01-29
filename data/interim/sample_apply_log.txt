@@ -1,0 +1,45 @@
+[2026-01-29 19:40:43] [INFO] Sample restriction process started
+[2026-01-29 19:40:43] [INFO] Loaded 8239 deals from data/interim/deals_ingested.rds
+[2026-01-29 19:40:43] [INFO] 
+[2026-01-29 19:40:43] [INFO] FILTER 1: Deal identifier
+[2026-01-29 19:40:43] [INFO]   Before: 8239 → After: 8239 (dropped 0)
+[2026-01-29 19:40:43] [INFO] 
+[2026-01-29 19:40:43] [INFO] FILTER 2: Target name
+[2026-01-29 19:40:43] [INFO]   Before: 8239 → After: 8239 (dropped 0)
+[2026-01-29 19:40:43] [INFO] 
+[2026-01-29 19:40:43] [INFO] FILTER 3: Announcement date
+[2026-01-29 19:40:43] [INFO]   Column: date_announced
+[2026-01-29 19:40:43] [INFO]   Before: 8239 → After: 8239 (dropped 0)
+[2026-01-29 19:40:43] [INFO] 
+[2026-01-29 19:40:43] [INFO] FILTER 4: Terminal outcome
+[2026-01-29 19:40:43] [INFO]   Before: 8239 → After: 8239 (dropped 0)
+[2026-01-29 19:40:43] [INFO]   Completed: 8239, Withdrawn: 0
+[2026-01-29 19:40:43] [INFO] 
+[2026-01-29 19:40:43] [INFO] FILTER 5: Target ticker
+[2026-01-29 19:40:43] [INFO]   Before: 8239 → After: 8176 (dropped 63)
+[2026-01-29 19:40:43] [INFO] 
+[2026-01-29 19:40:43] [INFO] FILTER 6: Time period
+[2026-01-29 19:40:43] [INFO]   Period: 2006 - 2023
+[2026-01-29 19:40:43] [INFO]   Before: 8176 → After: 7496 (dropped 680)
+[2026-01-29 19:40:43] [INFO] 
+[2026-01-29 19:40:43] [INFO] ======================================================================
+[2026-01-29 19:40:43] [INFO] SAMPLE RESTRICTION SUMMARY
+[2026-01-29 19:40:43] [INFO] ======================================================================
+[2026-01-29 19:40:43] [INFO] F1_deal_id: Has valid deal_id
+[2026-01-29 19:40:43] [INFO]          8239 → 8239 (dropped 0, 0%)
+[2026-01-29 19:40:43] [INFO] F2_target_name: Has valid target_name
+[2026-01-29 19:40:43] [INFO]          8239 → 8239 (dropped 0, 0%)
+[2026-01-29 19:40:43] [INFO] F3_announce_date: Has valid announcement date
+[2026-01-29 19:40:43] [INFO]          8239 → 8239 (dropped 0, 0%)
+[2026-01-29 19:40:43] [INFO] F4_terminal: Terminal outcome (completed/withdrawn)
+[2026-01-29 19:40:43] [INFO]          8239 → 8239 (dropped 0, 0%)
+[2026-01-29 19:40:43] [INFO] F5_ticker: Has valid target_ticker
+[2026-01-29 19:40:43] [INFO]          8239 → 8176 (dropped 63, 0.8%)
+[2026-01-29 19:40:43] [INFO] F6_period: Year 2006-2023
+[2026-01-29 19:40:43] [INFO]          8176 → 7496 (dropped 680, 8.3%)
+[2026-01-29 19:40:43] [INFO] 
+[2026-01-29 19:40:43] [INFO] FINAL: 8239 → 7496 deals (91% retained)
+[2026-01-29 19:40:44] [INFO] Saved: data/interim/deals_sample.rds
+[2026-01-29 19:40:44] [INFO] Saved: data/interim/sample_cascade_applied.csv
+[2026-01-29 19:40:44] [INFO] 
+[2026-01-29 19:40:44] [INFO] Sample restriction complete

@@ -1,0 +1,64 @@
+[2026-01-29 18:02:12] [INFO] CIK resolution process started
+[2026-01-29 18:02:12] [INFO] Loaded 7496 deals from data/interim/deals_sample.rds
+[2026-01-29 18:02:12] [INFO] 
+[2026-01-29 18:02:12] [INFO] STRATEGY 1: SEC Bulk Ticker File
+[2026-01-29 18:02:12] [INFO] --------------------------------------------------
+[2026-01-29 18:02:12] [INFO] Downloading fresh SEC bulk ticker file...
+[2026-01-29 18:02:14] [INFO] Downloaded 10317 companies
+[2026-01-29 18:02:14] [INFO] Matched 1442 deals via bulk ticker (19.2%)
+[2026-01-29 18:02:14] [INFO] 
+[2026-01-29 18:02:14] [INFO] STRATEGY 2: Historical Ticker Database
+[2026-01-29 18:02:14] [INFO] --------------------------------------------------
+[2026-01-29 18:02:14] [WARN] Historical database not found - will build it now
+[2026-01-29 18:02:14] [INFO] This may take several minutes...
+[2026-01-29 18:02:14] [INFO] Building historical database for 4998 unmatched tickers
+[2026-01-29 18:02:14] [INFO] Skipping full historical build (would require scanning all SEC submissions)
+[2026-01-29 18:02:14] [INFO] Run build_historical_ticker_database.R separately for comprehensive coverage
+[2026-01-29 18:02:14] [INFO] 
+[2026-01-29 18:02:14] [INFO] STRATEGY 3: Company Name Matching
+[2026-01-29 18:02:14] [INFO] --------------------------------------------------
+[2026-01-29 18:02:14] [INFO] Attempting name matching for 6057 unmatched deals
+[2026-01-29 18:02:14] [INFO] Limiting name matching to first 500 unmatched deals
+[2026-01-29 18:14:06] [DEBUG]   Processed 100/500 deals...
+[2026-01-29 18:26:33] [DEBUG]   Processed 200/500 deals...
+[2026-01-29 18:39:15] [DEBUG]   Processed 300/500 deals...
+[2026-01-29 18:51:36] [DEBUG]   Processed 400/500 deals...
+[2026-01-29 19:03:54] [DEBUG]   Processed 500/500 deals...
+[2026-01-29 19:03:54] [INFO] Matched 12 additional deals via name matching
+[2026-01-29 19:03:54] [INFO] 
+[2026-01-29 19:03:54] [INFO] ======================================================================
+[2026-01-29 19:03:54] [INFO] CIK RESOLUTION SUMMARY
+[2026-01-29 19:03:54] [INFO] ======================================================================
+[2026-01-29 19:03:54] [INFO] Total deals: 7496
+[2026-01-29 19:03:54] [INFO] With CIK: 1454 (19.4%)
+[2026-01-29 19:03:54] [INFO] Without CIK: 6045 (80.6%)
+[2026-01-29 19:03:54] [INFO] 
+[2026-01-29 19:03:54] [INFO] Match sources:
+[2026-01-29 19:03:54] [INFO]   bulk_ticker: 1442 (99.2%)
+[2026-01-29 19:03:54] [INFO]   name_match: 12 (0.8%)
+[2026-01-29 19:03:54] [INFO] 
+[2026-01-29 19:03:54] [INFO] Confidence levels:
+[2026-01-29 19:03:54] [INFO]   high: 1442 (99.2%)
+[2026-01-29 19:03:54] [INFO]   low: 12 (0.8%)
+[2026-01-29 19:03:54] [INFO] Saved: data/interim/deals_with_cik.rds
+[2026-01-29 19:03:54] [INFO] Saved: data/interim/cik_unmatched_deals.csv (6045 deals)
+[2026-01-29 19:03:54] [INFO] 
+[2026-01-29 19:03:54] [INFO] CIK resolution complete
+[2026-01-29 19:45:14] [INFO] ====================================================================== 
+[2026-01-29 19:45:14] [INFO] STEP 2 (v2): RESOLVE TARGET CIK 
+[2026-01-29 19:45:14] [INFO] ====================================================================== 
+[2026-01-29 19:45:14] [INFO] CIK resolution process started 
+[2026-01-29 19:45:31] [INFO] ====================================================================== 
+[2026-01-29 19:45:31] [INFO] STEP 2 (v2): RESOLVE TARGET CIK 
+[2026-01-29 19:45:31] [INFO] ====================================================================== 
+[2026-01-29 19:45:31] [INFO] CIK resolution process started 
+[2026-01-29 19:53:17] [INFO] ====================================================================== 
+[2026-01-29 19:53:17] [INFO] STEP 2 (v2): RESOLVE TARGET CIK 
+[2026-01-29 19:53:17] [INFO] ====================================================================== 
+[2026-01-29 19:53:17] [INFO] CIK resolution process started 
+[2026-01-29 19:53:17] [INFO] Loaded 7496 deals from data/interim/deals_sample.rds 
+[2026-01-29 19:57:53] [INFO] ====================================================================== 
+[2026-01-29 19:57:53] [INFO] STEP 2 (v2): RESOLVE TARGET CIK 
+[2026-01-29 19:57:53] [INFO] ====================================================================== 
+[2026-01-29 19:57:53] [INFO] CIK resolution process started 
+[2026-01-29 19:57:53] [INFO] Loaded 7496 deals from data/interim/deals_sample.rds 

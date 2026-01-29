@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-01-29 19:03:54.339367",
+  "input_file": "data/interim/deals_sample.rds",
+  "output_file": "data/interim/deals_with_cik.rds",
+  "n_total": 7496,
+  "n_with_cik": 1454,
+  "n_without_cik": 6045,
+  "match_rate_pct": 19.4,
+  "by_source": {
+    "bulk_ticker": 1442,
+    "name_match": 12
+  },
+  "by_confidence": {
+    "high": 1442,
+    "low": 12
+  }
+}

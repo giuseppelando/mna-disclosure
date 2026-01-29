@@ -1,0 +1,70 @@
+{
+  "cik": "0002094107",
+  "entityType": "other",
+  "sic": "6022",
+  "sicDescription": "State Commercial Banks",
+  "ownerOrg": "02 Finance",
+  "insiderTransactionForOwnerExists": 0,
+  "insiderTransactionForIssuerExists": 0,
+  "name": "Ballston Spa Bancorp, Inc.",
+  "tickers": "BSPA",
+  "exchanges": "OTC",
+  "ein": "742245601",
+  "lei": {},
+  "description": "",
+  "website": "",
+  "investorWebsite": "",
+  "category": "",
+  "fiscalYearEnd": "1231",
+  "stateOfIncorporation": "NY",
+  "stateOfIncorporationDescription": "NY",
+  "addresses": {
+    "mailing": {
+      "street1": "990 STATE ROUTE 67",
+      "street2": {},
+      "city": "BALLSTON SPA",
+      "stateOrCountry": "NY",
+      "zipCode": {},
+      "stateOrCountryDescription": "NY",
+      "isForeignLocation": 0,
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    },
+    "business": {
+      "street1": "990 STATE ROUTE 67",
+      "street2": {},
+      "city": "BALLSTON SPA",
+      "stateOrCountry": "NY",
+      "zipCode": {},
+      "stateOrCountryDescription": "NY",
+      "isForeignLocation": {},
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    }
+  },
+  "phone": "(518) 363-8199",
+  "flags": "",
+  "formerNames": [],
+  "filings": {
+    "recent": {
+      "accessionNumber": ["0001104659-26-006181", "0001104659-25-116415"],
+      "filingDate": ["2026-01-23", "2025-11-26"],
+      "reportDate": ["", ""],
+      "acceptanceDateTime": ["2026-01-23T14:17:21.000Z", "2025-11-26T15:59:10.000Z"],
+      "act": ["33", "33"],
+      "form": ["S-4/A", "S-4"],
+      "fileNumber": ["333-291808", "333-291808"],
+      "filmNumber": ["26555651", "251529897"],
+      "items": ["", ""],
+      "core_type": ["S-4/A", "S-4"],
+      "size": [15018070, 24530408],
+      "isXBRL": [1, 1],
+      "isInlineXBRL": [1, 1],
+      "primaryDocument": ["tm2530913-3_s4a.htm", "tm2530913-1_s4.htm"],
+      "primaryDocDescription": ["S-4/A", "S-4"]
+    },
+    "files": []
+  }
+}

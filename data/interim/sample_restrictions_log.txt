@@ -1,0 +1,92 @@
+[2026-01-29 02:52:14] [INFO] ======================================================================
+[2026-01-29 02:52:14] [INFO] SAMPLE RESTRICTION CASCADE - COMPREHENSIVE VERSION
+[2026-01-29 02:52:14] [INFO] ======================================================================
+[2026-01-29 02:52:14] [INFO] 
+[2026-01-29 02:52:14] [INFO] STEP 1: Loading data...
+[2026-01-29 02:52:14] [INFO] ----------------------------------------------------------------------
+[2026-01-29 02:52:14] [INFO] Loaded: deals_with_premium.rds
+[2026-01-29 02:52:14] [INFO] Starting sample: 8239 deals
+[2026-01-29 02:52:14] [INFO] Available columns: 62
+[2026-01-29 02:52:14] [DEBUG] Key columns present:
+[2026-01-29 02:52:14] [DEBUG]   deal_id: ✓
+[2026-01-29 02:52:14] [DEBUG]   target_name: ✓
+[2026-01-29 02:52:14] [DEBUG]   deal_status: ✓
+[2026-01-29 02:52:14] [DEBUG]   deal_completed: ✓
+[2026-01-29 02:52:14] [DEBUG]   target_nation: ✓
+[2026-01-29 02:52:14] [DEBUG]   percentage_of_cash: ✓
+[2026-01-29 02:52:14] [DEBUG]   percentage_of_stock: ✓
+[2026-01-29 02:52:14] [DEBUG]   deal_premium: ✓
+[2026-01-29 02:52:14] [INFO] 
+[2026-01-29 02:52:14] [INFO] STEP 2: Identifying stake columns...
+[2026-01-29 02:52:14] [INFO] ----------------------------------------------------------------------
+[2026-01-29 02:52:14] [WARN] No initial stake column found
+[2026-01-29 02:52:14] [INFO] Found final stake: percentage_of_shares_acquired_in_transaction
+[2026-01-29 02:52:14] [INFO] Summary of final_stake_pct:
+[2026-01-29 02:52:14] [DEBUG]   Min: 0%
+[2026-01-29 02:52:14] [DEBUG]   Median: 100%
+[2026-01-29 02:52:14] [DEBUG]   Max: 100%
+[2026-01-29 02:52:14] [DEBUG]   Missing: 0 (0%)
+[2026-01-29 02:52:14] [INFO] 
+[2026-01-29 02:52:14] [INFO] STEP 3: Applying restriction cascade...
+[2026-01-29 02:52:14] [INFO] ----------------------------------------------------------------------
+[2026-01-29 02:52:14] [INFO] 
+[2026-01-29 02:52:14] [INFO] Restriction 1: Terminal outcomes only...
+[2026-01-29 02:52:14] [INFO]   Using deal_completed indicator
+[2026-01-29 02:52:14] [INFO]   Removed: 0 (0%)
+[2026-01-29 02:52:14] [INFO]   Remaining: 8239
+[2026-01-29 02:52:14] [INFO] 
+[2026-01-29 02:52:14] [INFO] Restriction 2: Control transfer (stake ≥ 50%)...
+[2026-01-29 02:52:14] [INFO]   Removed missing stake: 0
+[2026-01-29 02:52:14] [INFO]   Removed non-control (<50%): 2776
+[2026-01-29 02:52:14] [INFO]   Removed: 2776 (33.7%)
+[2026-01-29 02:52:14] [INFO]   Remaining: 5463
+[2026-01-29 02:52:14] [INFO] 
+[2026-01-29 02:52:14] [INFO] Restriction 3: US public targets...
+[2026-01-29 02:52:14] [INFO]   Filtered to US targets
+[2026-01-29 02:52:14] [INFO]   Removed: 0 (0%)
+[2026-01-29 02:52:14] [INFO]   Remaining: 5463
+[2026-01-29 02:52:14] [INFO] 
+[2026-01-29 02:52:14] [INFO] Restriction 4 (OPTIONAL): LBO exclusion...
+[2026-01-29 02:52:14] [INFO]   Checking columns: deal_type, acquisition_techniques
+[2026-01-29 02:52:14] [INFO]   Found 577 LBOs (10.6%)
+[2026-01-29 02:52:14] [WARN]   LBOs flagged but NOT excluded (adjust if needed)
+[2026-01-29 02:52:14] [INFO]   Remaining: 5463
+[2026-01-29 02:52:14] [INFO] 
+[2026-01-29 02:52:14] [INFO] Restriction 5: Missing critical identifiers...
+[2026-01-29 02:52:14] [WARN]   Deals without ticker: 49 (0.9%)
+[2026-01-29 02:52:14] [INFO]   (Kept in sample - CIK matching will handle)
+[2026-01-29 02:52:14] [INFO]   Removed: 0
+[2026-01-29 02:52:14] [INFO]   Remaining: 5463
+[2026-01-29 02:52:14] [INFO] 
+[2026-01-29 02:52:14] [INFO] STEP 4: Creating data quality flags...
+[2026-01-29 02:52:14] [INFO] ----------------------------------------------------------------------
+[2026-01-29 02:52:14] [INFO] Data quality summary:
+[2026-01-29 02:52:14] [INFO]   Premium data: 73.7%
+[2026-01-29 02:52:14] [INFO]   Ticker: 99.1%
+[2026-01-29 02:52:14] [INFO]   Deal value: 89.6%
+[2026-01-29 02:52:14] [INFO]   Payment method: 82.1%
+[2026-01-29 02:52:14] [INFO]   Mean quality score: 0.87
+[2026-01-29 02:52:14] [INFO] Added target_cik column for CIK matching
+[2026-01-29 02:52:14] [INFO] 
+[2026-01-29 02:52:14] [INFO] STEP 5: Saving outputs...
+[2026-01-29 02:52:14] [INFO] ----------------------------------------------------------------------
+[2026-01-29 02:52:14] [INFO] Saved: data/processed/deals_restricted.rds
+[2026-01-29 02:52:14] [INFO] Saved: data/interim/sample_cascade.csv
+[2026-01-29 02:52:14] [INFO] 
+[2026-01-29 02:52:14] [INFO] ======================================================================
+[2026-01-29 02:52:14] [INFO] RESTRICTION CASCADE COMPLETE
+[2026-01-29 02:52:14] [INFO] ======================================================================
+[2026-01-29 02:52:14] [INFO] 
+[2026-01-29 02:52:14] [INFO] Sample reduction:
+[2026-01-29 02:52:14] [INFO]   Step 1: -0 (Non-terminal outcomes)
+[2026-01-29 02:52:14] [INFO]   Step 2: -2776 (Non-control transactions + missing stake)
+[2026-01-29 02:52:14] [INFO]   Step 3: -0 (Non-US targets)
+[2026-01-29 02:52:14] [INFO]   Step 4: -0 (LBOs (if excluded))
+[2026-01-29 02:52:14] [INFO]   Step 5: -0 (Missing deal_id or target_name)
+[2026-01-29 02:52:14] [INFO] 
+[2026-01-29 02:52:14] [INFO] Final sample: 5463 deals (66.3% of initial)
+[2026-01-29 02:52:14] [INFO] 
+[2026-01-29 02:52:14] [INFO] Data quality indicators:
+[2026-01-29 02:52:14] [INFO]   Premium available: 4024 deals
+[2026-01-29 02:52:14] [INFO]   Ticker available: 5414 deals
+[2026-01-29 02:52:14] [INFO]   Ready for CIK matching: 5414 deals

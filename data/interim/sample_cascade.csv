@@ -1,0 +1,7 @@
+"step","description","n_removed","n_remaining","pct_remaining"
+"0","Initial sample",0,8239,100
+"1","Non-terminal outcomes",0,8239,100
+"2","Non-control transactions + missing stake",2776,5463,66.3
+"3","Non-US targets",0,5463,66.3
+"4","LBOs (if excluded)",0,5463,66.3
+"5","Missing deal_id or target_name",0,5463,66.3

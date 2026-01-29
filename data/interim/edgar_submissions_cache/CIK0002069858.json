@@ -1,0 +1,70 @@
+{
+  "cik": "0002069858",
+  "entityType": "other",
+  "sic": "3470",
+  "sicDescription": "Coating, Engraving & Allied Services",
+  "ownerOrg": "04 Manufacturing",
+  "insiderTransactionForOwnerExists": 0,
+  "insiderTransactionForIssuerExists": 0,
+  "name": "APEX Global Solutions Ltd",
+  "tickers": "APEX",
+  "exchanges": null,
+  "ein": "000000000",
+  "lei": {},
+  "description": "",
+  "website": "",
+  "investorWebsite": "",
+  "category": "",
+  "fiscalYearEnd": "1231",
+  "stateOfIncorporation": "D8",
+  "stateOfIncorporationDescription": "Virgin Islands, British",
+  "addresses": {
+    "mailing": {
+      "street1": "1 TUAS VIEW PLACE",
+      "street2": "#03-14 WESTLINK ONE",
+      "city": "SINGAPORE",
+      "stateOrCountry": {},
+      "zipCode": "637433",
+      "stateOrCountryDescription": {},
+      "isForeignLocation": 1,
+      "foreignStateTerritory": {},
+      "country": "Singapore",
+      "countryCode": "U0"
+    },
+    "business": {
+      "street1": "1 TUAS VIEW PLACE",
+      "street2": "#03-14 WESTLINK ONE",
+      "city": "SINGAPORE",
+      "stateOrCountry": {},
+      "zipCode": "637433",
+      "stateOrCountryDescription": {},
+      "isForeignLocation": 1,
+      "foreignStateTerritory": {},
+      "country": "Singapore",
+      "countryCode": "U0"
+    }
+  },
+  "phone": "65-6909-0450",
+  "flags": "",
+  "formerNames": [],
+  "filings": {
+    "recent": {
+      "accessionNumber": ["0001213900-25-103053", "9999999995-25-003143", "0001213900-25-091214", "0001213900-25-090166", "0001213900-25-085508", "0001213900-25-078341", "0001213900-25-066400", "0001213900-25-054431"],
+      "filingDate": ["2025-10-28", "2025-09-29", "2025-09-24", "2025-09-22", "2025-09-08", "2025-08-19", "2025-07-22", "2025-06-16"],
+      "reportDate": ["", "", "", "", "", "", "", ""],
+      "acceptanceDateTime": ["2025-10-28T15:40:41.000Z", "2025-09-30T00:15:09.000Z", "2025-09-24T17:25:42.000Z", "2025-09-22T17:04:54.000Z", "2025-09-08T15:59:38.000Z", "2025-08-19T12:34:30.000Z", "2025-07-22T10:04:11.000Z", "2025-06-13T19:57:29.000Z"],
+      "act": ["33", "33", "33", "33", "33", "33", "33", "33"],
+      "form": ["POS AM", "EFFECT", "F-1/A", "F-1/A", "F-1/A", "F-1", "DRS/A", "DRS"],
+      "fileNumber": ["333-289708", "333-289708", "333-289708", "333-289708", "333-289708", "333-289708", "377-08111", "377-08111"],
+      "filmNumber": ["251424591", "251358010", "251339707", "251330774", "251299944", "251230428", "251138962", "251048186"],
+      "items": ["", ",,", "", "", "", "", "", ""],
+      "core_type": ["POS AM", "EFFECT", "F-1/A", "F-1/A", "F-1/A", "F-1", "DRS/A", "DRS"],
+      "size": [3764574, 1885, 379618, 4910767, 3307427, 5487973, 1950826, 1892551],
+      "isXBRL": [0, 0, 0, 0, 0, 1, 0, 0],
+      "isInlineXBRL": [0, 0, 0, 0, 0, 1, 0, 0],
+      "primaryDocument": ["ea0262624-posam1_apexglo.htm", "xslEFFECTX01/primary_doc.xml", "ea0258649-f1a3_apexglo.htm", "ea0258095-f1a2_apexglo.htm", "ea0256220-f1a1_apexglo.htm", "ea0253644-f1_apexglo.htm", "filename1.htm", "filename1.htm"],
+      "primaryDocDescription": ["POST-EFFECTIVE AMENDMENT NO. 1 TO FORM F-1", "", "AMENDMENT NO. 3 TO FORM F-1", "AMENDMENT NO. 2 TO FORM F-1", "AMENDMENT NO. 1 TO FORM F-1", "REGISTRATION STATEMENT", "", ""]
+    },
+    "files": []
+  }
+}

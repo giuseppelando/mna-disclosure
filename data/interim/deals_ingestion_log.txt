@@ -1,0 +1,59 @@
+[2026-01-28 18:41:54] [INFO] =================================================================
+[2026-01-28 18:41:54] [INFO] M&A DEAL DATA INGESTION (Research Design Aligned)
+[2026-01-28 18:41:54] [INFO] =================================================================
+[2026-01-28 18:41:54] [INFO] Schema: config/data_schema.yaml
+[2026-01-28 18:41:54] [INFO] Start time: 2026-01-28 18:41:54
+[2026-01-28 18:41:54] [INFO] 
+[2026-01-28 18:41:54] [INFO] STEP 1: Loading raw data
+[2026-01-28 18:41:54] [INFO] -----------------------------------------------------------------
+[2026-01-28 18:41:54] [INFO] Input file: Deals_v1a.xlsx
+[2026-01-28 18:41:55] [INFO] After initial load: 9507 rows
+[2026-01-28 18:41:55] [INFO] Raw dimensions: 9507 rows × 52 columns
+[2026-01-28 18:41:55] [DEBUG] Raw column names (first 10): sdc_deal_no, date_announced, rank_date, rank_value_including_net_debt_of_target_usd_millions, target_full_name, target_macro_industry, target_mid_industry, target_nation, acquiror_full_name, acquiror_macro_industry
+[2026-01-28 18:41:55] [INFO] 
+[2026-01-28 18:41:55] [INFO] STEP 2: Removing empty rows and unnamed columns
+[2026-01-28 18:41:55] [INFO] -----------------------------------------------------------------
+[2026-01-28 18:41:55] [INFO] Removed 0 completely empty rows
+[2026-01-28 18:41:55] [INFO] After empty row/column removal: 9507 rows
+[2026-01-28 18:41:55] [INFO] 
+[2026-01-28 18:41:55] [INFO] STEP 3: Deduplication
+[2026-01-28 18:41:55] [INFO] -----------------------------------------------------------------
+[2026-01-28 18:41:55] [WARN] Found 0 duplicate rows (0% of data)
+[2026-01-28 18:41:55] [INFO] After deduplication: 9507 rows
+[2026-01-28 18:41:55] [INFO] 
+[2026-01-28 18:41:55] [INFO] STEP 4: Mapping columns to standard schema
+[2026-01-28 18:41:55] [INFO] -----------------------------------------------------------------
+[2026-01-28 18:41:55] [INFO] Mapped 3/20 columns
+[2026-01-28 18:41:55] [ERROR]   Missing required columns: deal_id, target_name
+[2026-01-28 18:41:55] [DEBUG] Column mapping details:
+[2026-01-28 18:41:55] [ERROR]   ✗ deal_id [REQUIRED] <- NOT FOUND
+[2026-01-28 18:41:55] [ERROR]   ✗ target_name [REQUIRED] <- NOT FOUND
+[2026-01-28 18:41:55] [DEBUG]   - acquirer_name [optional] <- not found
+[2026-01-28 18:41:55] [DEBUG]   - target_ticker [optional] <- not found
+[2026-01-28 18:41:55] [DEBUG]   - target_isin [optional] <- not found
+[2026-01-28 18:41:55] [DEBUG]   ✓ announce_date <- date_announced
+[2026-01-28 18:41:55] [DEBUG]   - complete_date [optional] <- not found
+[2026-01-28 18:41:55] [DEBUG]   - withdrawn_date [optional] <- not found
+[2026-01-28 18:41:55] [DEBUG]   - expected_complete_date [optional] <- not found
+[2026-01-28 18:41:55] [DEBUG]   - assumed_complete_date [optional] <- not found
+[2026-01-28 18:41:55] [DEBUG]   ✓ deal_status <- deal_status
+[2026-01-28 18:41:55] [DEBUG]   ✓ deal_type <- deal_type
+[2026-01-28 18:41:55] [DEBUG]   - payment_method [optional] <- not found
+[2026-01-28 18:41:55] [DEBUG]   - deal_value_eur_th [optional] <- not found
+[2026-01-28 18:41:55] [DEBUG]   - offer_price_eur [optional] <- not found
+[2026-01-28 18:41:55] [DEBUG]   - initial_stake_pct [optional] <- not found
+[2026-01-28 18:41:55] [DEBUG]   - final_stake_pct [optional] <- not found
+[2026-01-28 18:41:55] [DEBUG]   - target_sic [optional] <- not found
+[2026-01-28 18:41:55] [DEBUG]   - target_exchange [optional] <- not found
+[2026-01-28 18:41:55] [DEBUG]   - acquirer_country [optional] <- not found
+[2026-01-28 18:41:55] [INFO] Retained 3 mapped columns
+[2026-01-28 18:41:55] [INFO] After column mapping: 9507 rows
+[2026-01-28 18:41:55] [INFO] 
+[2026-01-28 18:41:55] [INFO] STEP 5: Converting data types
+[2026-01-28 18:41:55] [INFO] -----------------------------------------------------------------
+[2026-01-28 18:41:55] [INFO] Data type conversion complete
+[2026-01-28 18:41:55] [INFO] After type conversion: 9507 rows
+[2026-01-28 18:41:55] [INFO] 
+[2026-01-28 18:41:55] [INFO] STEP 6: Creating derived variables (research design aligned)
+[2026-01-28 18:41:55] [INFO] -----------------------------------------------------------------
+[2026-01-28 18:41:55] [INFO] Creating outcome variables...

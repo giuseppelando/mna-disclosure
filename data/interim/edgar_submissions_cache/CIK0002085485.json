@@ -1,0 +1,70 @@
+{
+  "cik": "0002085485",
+  "entityType": "other",
+  "sic": "6770",
+  "sicDescription": "Blank Checks",
+  "ownerOrg": "05 Real Estate & Construction",
+  "insiderTransactionForOwnerExists": 0,
+  "insiderTransactionForIssuerExists": 0,
+  "name": "APEX Tech Acquisition Inc.",
+  "tickers": "TRAD",
+  "exchanges": null,
+  "ein": "000000000",
+  "lei": {},
+  "description": "",
+  "website": "",
+  "investorWebsite": "",
+  "category": "",
+  "fiscalYearEnd": "0831",
+  "stateOfIncorporation": "E9",
+  "stateOfIncorporationDescription": "Cayman Islands",
+  "addresses": {
+    "mailing": {
+      "street1": "411 E HUNTINGTON",
+      "street2": "STE 206",
+      "city": "ARCADIA",
+      "stateOrCountry": "CA",
+      "zipCode": "91006",
+      "stateOrCountryDescription": "CA",
+      "isForeignLocation": 0,
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    },
+    "business": {
+      "street1": "411 E HUNTINGTON",
+      "street2": "STE 206",
+      "city": "ARCADIA",
+      "stateOrCountry": "CA",
+      "zipCode": "91006",
+      "stateOrCountryDescription": "CA",
+      "isForeignLocation": {},
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    }
+  },
+  "phone": "8477705171",
+  "flags": "",
+  "formerNames": [],
+  "filings": {
+    "recent": {
+      "accessionNumber": ["0001477932-26-000392", "0001477932-25-009136", "0001477932-25-008787", "0001477932-25-006705"],
+      "filingDate": ["2026-01-26", "2025-12-22", "2025-12-04", "2025-09-12"],
+      "reportDate": ["", "", "", ""],
+      "acceptanceDateTime": ["2026-01-27T01:28:23.000Z", "2025-12-22T19:24:22.000Z", "2025-12-04T20:34:46.000Z", "2025-09-12T20:19:03.000Z"],
+      "act": ["33", "33", "33", "33"],
+      "form": ["S-1/A", "S-1/A", "S-1", "DRS"],
+      "fileNumber": ["333-291936", "333-291936", "333-291936", "377-08454"],
+      "filmNumber": ["26561835", "251591782", "251549229", "251311737"],
+      "items": ["", "", "", ""],
+      "core_type": ["S-1/A", "S-1/A", "S-1", "DRS"],
+      "size": [3534742, 344833, 4094794, 1998825],
+      "isXBRL": [1, 0, 1, 0],
+      "isInlineXBRL": [1, 0, 1, 0],
+      "primaryDocument": ["appex_s1a.htm", "appex_s1a.htm", "appex_s1.htm", "filename1.htm"],
+      "primaryDocDescription": ["FORM S-1/A", "FORM S-1/A", "FORM S-1", ""]
+    },
+    "files": []
+  }
+}

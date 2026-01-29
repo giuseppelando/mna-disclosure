@@ -1,0 +1,76 @@
+{
+  "cik": "0001946585",
+  "entityType": "other",
+  "sic": "7372",
+  "sicDescription": "Services-Prepackaged Software",
+  "ownerOrg": "06 Technology",
+  "insiderTransactionForOwnerExists": 0,
+  "insiderTransactionForIssuerExists": 0,
+  "name": "Tekumo, Inc.",
+  "tickers": "TKMO",
+  "exchanges": "OTC",
+  "ein": "954217605",
+  "lei": {},
+  "description": "",
+  "website": "",
+  "investorWebsite": "",
+  "category": "",
+  "fiscalYearEnd": "1231",
+  "stateOfIncorporation": "DE",
+  "stateOfIncorporationDescription": "DE",
+  "addresses": {
+    "mailing": {
+      "street1": "555 MIDDLE CREEK PARKWAY # 100,",
+      "street2": {},
+      "city": "COLORADO SPRINGS",
+      "stateOrCountry": "CO",
+      "zipCode": "80921",
+      "stateOrCountryDescription": "CO",
+      "isForeignLocation": {},
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    },
+    "business": {
+      "street1": "555 MIDDLE CREEK PARKWAY # 100,",
+      "street2": {},
+      "city": "COLORADO SPRINGS",
+      "stateOrCountry": "CO",
+      "zipCode": "80921",
+      "stateOrCountryDescription": "CO",
+      "isForeignLocation": {},
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    }
+  },
+  "phone": "3034892950",
+  "flags": "",
+  "formerNames": [
+    {
+      "name": "Balincan USA, Inc",
+      "from": "2022-09-23T00:00:00.000Z",
+      "to": "2023-12-19T00:00:00.000Z"
+    }
+  ],
+  "filings": {
+    "recent": {
+      "accessionNumber": ["0001213900-24-040692", "0001213900-24-022324", "0001213900-23-096990", "0001013762-23-001695", "0001213900-23-004169", "0001213900-22-079493", "9999999994-22-000476", "0001213900-22-078225", "0001213900-22-064344", "0000000000-22-010976", "0001213900-22-058384"],
+      "filingDate": ["2024-05-08", "2024-03-14", "2023-12-19", "2023-10-04", "2023-01-20", "2022-12-13", "2022-12-09", "2022-12-07", "2022-10-17", "2022-10-05", "2022-09-23"],
+      "reportDate": ["", "", "", "", "", "", "", "", "", "", ""],
+      "acceptanceDateTime": ["2024-05-08T10:28:47.000Z", "2024-03-13T20:31:09.000Z", "2023-12-19T17:08:04.000Z", "2023-10-04T16:53:29.000Z", "2023-01-20T17:08:24.000Z", "2022-12-13T16:00:21.000Z", "2022-12-12T00:15:20.000Z", "2022-12-07T16:16:42.000Z", "2022-10-17T16:07:37.000Z", "2022-10-05T15:30:04.000Z", "2022-09-23T16:03:52.000Z"],
+      "act": ["33", "33", "33", "33", "33", "33", "33", "", "33", "", "33"],
+      "form": ["1-A-W", "1-A POS", "1-A POS", "1-A POS", "253G2", "253G1", "QUALIF", "CORRESP", "1-A/A", "UPLOAD", "1-A"],
+      "fileNumber": ["024-12004", "024-12004", "024-12004", "024-12004", "024-12004", "024-12004", "024-12004", "", "024-12004", "", "024-12004"],
+      "filmNumber": ["24924684", "24747602", "231498342", "231308666", "23541756", "221459669", "221456033", "", "221313835", "", "221262335"],
+      "items": ["", "", "", "", "", "", "", "", "", "", ""],
+      "core_type": ["1-A-W", "1-A POS", "1-A POS", "1-A POS", "253G2", "253G1", "QUALIF", "CORRESP", "1-A/A", "LETTER", "1-A"],
+      "size": [6556, 1709130, 6503085, 1059019, 685243, 682386, 1692, 6191, 14518974, 40930, 48376061],
+      "isXBRL": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "isInlineXBRL": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "primaryDocument": ["ea0205547-1aw_tekumo.htm", "xsl1-A_X01/primary_doc.xml", "xsl1-A_X01/primary_doc.xml", "xsl1-A_X01/primary_doc.xml", "ea171801-253g2_balincanusa.htm", "ea170042-253g1_balincanusa.htm", "xslQUALIFX01/primary_doc.xml", "filename1.htm", "xsl1-A_X01/primary_doc.xml", "filename1.pdf", "xsl1-A_X01/primary_doc.xml"],
+      "primaryDocDescription": ["WITHDRAWAL OF OFFERING STATEMENT", "", "", "", "OFFERING CIRCULAR", "OFFERING CIRCULAR", "", "", "", "", ""]
+    },
+    "files": []
+  }
+}

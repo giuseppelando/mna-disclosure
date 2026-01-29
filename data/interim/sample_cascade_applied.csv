@@ -1,0 +1,7 @@
+"step","description","n_before","n_after","n_dropped"
+"F1_deal_id","Has valid deal_id",8239,8239,0
+"F2_target_name","Has valid target_name",8239,8239,0
+"F3_announce_date","Has valid announcement date",8239,8239,0
+"F4_terminal","Terminal outcome (completed/withdrawn)",8239,8239,0
+"F5_ticker","Has valid target_ticker",8239,8176,63
+"F6_period","Year 2006-2023",8176,7496,680

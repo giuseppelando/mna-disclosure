@@ -1,0 +1,70 @@
+{
+  "cik": "0002085091",
+  "entityType": "other",
+  "sic": "",
+  "sicDescription": "",
+  "ownerOrg": "",
+  "insiderTransactionForOwnerExists": 0,
+  "insiderTransactionForIssuerExists": 0,
+  "name": "Robinhood Ventures Fund I",
+  "tickers": "RVI",
+  "exchanges": null,
+  "ein": "000000000",
+  "lei": {},
+  "description": "",
+  "website": "",
+  "investorWebsite": "",
+  "category": "",
+  "fiscalYearEnd": "0331",
+  "stateOfIncorporation": "DE",
+  "stateOfIncorporationDescription": "DE",
+  "addresses": {
+    "mailing": {
+      "street1": "85 WILLOW ROAD",
+      "street2": {},
+      "city": "MENLO PARK",
+      "stateOrCountry": "CA",
+      "zipCode": "94025",
+      "stateOrCountryDescription": "CA",
+      "isForeignLocation": 0,
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    },
+    "business": {
+      "street1": "85 WILLOW ROAD",
+      "street2": {},
+      "city": "MENLO PARK",
+      "stateOrCountry": "CA",
+      "zipCode": "94025",
+      "stateOrCountryDescription": "CA",
+      "isForeignLocation": {},
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    }
+  },
+  "phone": "(703) 200-5952",
+  "flags": "",
+  "formerNames": [],
+  "filings": {
+    "recent": {
+      "accessionNumber": ["0001628280-26-002976", "0001628280-26-001688", "0001628280-25-044216", "0001628280-25-042093", "0002085091-25-000033", "0002085091-25-000031", "0002085091-25-000028", "0002085091-25-000026", "0002085091-25-000024", "0002085091-25-000021", "0002085091-25-000019", "0002085091-25-000009", "0002085091-25-000006"],
+      "filingDate": ["2026-01-22", "2026-01-09", "2025-10-06", "2025-09-19", "2025-09-15", "2025-09-15", "2025-09-15", "2025-09-15", "2025-09-15", "2025-09-15", "2025-09-15", "2025-09-15", "2025-09-15"],
+      "reportDate": ["", "", "", "", "", "", "", "", "", "", "", "", ""],
+      "acceptanceDateTime": ["2026-01-22T02:53:08.000Z", "2026-01-09T22:24:35.000Z", "2025-10-06T12:01:26.000Z", "2025-09-19T16:54:43.000Z", "2025-09-15T12:49:09.000Z", "2025-09-15T12:46:24.000Z", "2025-09-15T12:45:22.000Z", "2025-09-15T12:44:39.000Z", "2025-09-15T12:24:57.000Z", "2025-09-15T12:23:50.000Z", "2025-09-15T12:22:51.000Z", "2025-09-15T11:50:47.000Z", "2025-09-15T11:45:30.000Z"],
+      "act": ["40,33", "40,33", "33", "33", "33", "33", "33", "33", "33", "33", "33", "40,33", "40"],
+      "form": ["N-2/A", "N-2/A", "497AD", "497AD", "497AD", "497AD", "497AD", "497AD", "497AD", "497AD", "497AD", "N-2", "N-8A"],
+      "fileNumber": ["811-24119,333-290253", "811-24119,333-290253", "333-290253", "333-290253", "333-290253", "333-290253", "333-290253", "333-290253", "333-290253", "333-290253", "333-290253", "811-24119,333-290253", "811-24119"],
+      "filmNumber": ["26549587,26549586", "26524018,26524017", "251375661", "251325848", "251313316", "251313307", "251313303", "251313302", "251313241", "251313237", "251313234", "251313195,251313194", "251313187"],
+      "items": ["", "", "", "", "", "", "", "", "", "", "", "", ""],
+      "core_type": ["N-2/A", "N-2/A", "497AD", "497AD", "497AD", "497AD", "497AD", "497AD", "497AD", "497AD", "497AD", "N-2", "N-8A"],
+      "size": [5930171, 1525067, 3045981, 3362151, 1973017, 3853766, 4326479, 4232334, 5175664, 3714831, 160344, 1546522, 14628],
+      "isXBRL": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+      "isInlineXBRL": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
+      "primaryDocument": ["robinhoodventuresfundi-nx2.htm", "robinhoodventuresfundi-nx2a.htm", "robinhoodventuresfundi-497.htm", "robinhood-497adxgem.htm", "robinhood-socialxvladretwe.htm", "robinhood-venturesxstorybo.htm", "robinhood-socialxinstagram.htm", "robinhood-socialxrobinhood.htm", "robinhood-497adrhvmobile.htm", "robinhood-497adrhvdesktop.htm", "robinhoodventuresfundi-497.htm", "robinhoodventuresfundi-nx2.htm", "robinhoodventuresfundi-nx8a.htm"],
+      "primaryDocDescription": ["N-2/A", "N-2/A", "497AD", "497AD", "497AD", "497AD", "497AD", "497AD", "497AD", "497AD", "497AD", "N-2", "N-8A"]
+    },
+    "files": []
+  }
+}

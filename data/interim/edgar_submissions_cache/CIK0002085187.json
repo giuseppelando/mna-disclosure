@@ -1,0 +1,76 @@
+{
+  "cik": "0002085187",
+  "entityType": "other",
+  "sic": "5712",
+  "sicDescription": "Retail-Furniture Stores",
+  "ownerOrg": "07 Trade & Services",
+  "insiderTransactionForOwnerExists": 0,
+  "insiderTransactionForIssuerExists": 0,
+  "name": "Bob's Discount Furniture, Inc.",
+  "tickers": "BOBS",
+  "exchanges": null,
+  "ein": "464501905",
+  "lei": {},
+  "description": "",
+  "website": "",
+  "investorWebsite": "",
+  "category": "",
+  "fiscalYearEnd": "1228",
+  "stateOfIncorporation": "DE",
+  "stateOfIncorporationDescription": "DE",
+  "addresses": {
+    "mailing": {
+      "street1": "434 TOLLAND TURNPIKE",
+      "street2": {},
+      "city": "MANCHESTER",
+      "stateOrCountry": "CT",
+      "zipCode": "06042",
+      "stateOrCountryDescription": "CT",
+      "isForeignLocation": 0,
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    },
+    "business": {
+      "street1": "434 TOLLAND TURNPIKE",
+      "street2": {},
+      "city": "MANCHESTER",
+      "stateOrCountry": "CT",
+      "zipCode": "06042",
+      "stateOrCountryDescription": "CT",
+      "isForeignLocation": {},
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    }
+  },
+  "phone": "(860) 474-1200",
+  "flags": "",
+  "formerNames": [
+    {
+      "name": "BDF Holding Corp.",
+      "from": "2025-09-19T04:00:00.000Z",
+      "to": "2025-09-19T04:00:00.000Z"
+    }
+  ],
+  "filings": {
+    "recent": {
+      "accessionNumber": ["0001628280-26-003358", "0001628280-26-001455", "0001628280-25-055692", "0001628280-25-049643", "0001628280-25-042192"],
+      "filingDate": ["2026-01-26", "2026-01-09", "2025-12-08", "2025-11-05", "2025-09-19"],
+      "reportDate": ["", "", "", "", ""],
+      "acceptanceDateTime": ["2026-01-26T12:18:44.000Z", "2026-01-09T13:41:07.000Z", "2025-12-08T13:01:54.000Z", "2025-11-05T21:39:53.000Z", "2025-09-19T20:40:18.000Z"],
+      "act": ["33", "33", "33", "33", "33"],
+      "form": ["S-1/A", "S-1", "DRS/A", "DRS/A", "DRS"],
+      "fileNumber": ["333-292627", "333-292627", "377-08481", "377-08481", "377-08481"],
+      "filmNumber": ["26558419", "26521418", "251554693", "251454712", "251327328"],
+      "items": ["", "", "", "", ""],
+      "core_type": ["S-1/A", "S-1", "DRS/A", "DRS/A", "DRS"],
+      "size": [65532038, 53310869, 67623406, 11832671, 11646512],
+      "isXBRL": [1, 1, 0, 0, 0],
+      "isInlineXBRL": [1, 1, 0, 0, 0],
+      "primaryDocument": ["bobsdiscountfurnitureincs-.htm", "bobsdiscountfurnitureincs-1.htm", "filename1.htm", "filename1.htm", "filename1.htm"],
+      "primaryDocDescription": ["S-1/A", "S-1", "", "", ""]
+    },
+    "files": []
+  }
+}

@@ -1,0 +1,25 @@
+======================================================================
+DEAL PREMIUM CALCULATION REPORT
+======================================================================
+
+Date: 2026-01-29
+Input: data/interim/deals_ingested.rds
+Output: data/interim/deals_with_premium.rds
+
+PRICE COLUMNS IDENTIFIED
+----------------------------------------------------------------------
+Offer price:     share_price_paid_by_acquiror_for_target_shares_usd
+Target (1-day):  target_share_price_1_day_prior_to_announcement_usd
+Target (1-week): target_share_price_1_week_prior_to_announcement_usd
+Target (4-week): target_share_price_4_weeks_prior_to_announcement_usd
+
+PREMIUM SUMMARY STATISTICS
+----------------------------------------------------------------------
+Observations:  5112 / 8239 (62.0%)
+Mean:          99.32% (0.9932)
+Median:        23.14% (0.2314)
+Std Dev:       2678.53% (26.7853)
+Min:           -99.97% (-0.9997)
+25th pct:      8.06% (0.0806)
+75th pct:      44.15% (0.4415)
+Max:           186760.00% (1867.6000)

@@ -1,0 +1,65 @@
+[2026-01-28 17:03:35] [INFO] =================================================================
+[2026-01-28 17:03:35] [INFO] FILING IDENTIFICATION: Pre-Announcement 10-K Selection
+[2026-01-28 17:03:35] [INFO] =================================================================
+[2026-01-28 17:03:35] [INFO] Input: data/interim/deals_with_cik_verified.rds
+[2026-01-28 17:03:35] [INFO] Output: data/interim/deals_with_filings.rds
+[2026-01-28 17:03:35] [INFO] Minimum lag: 30 days (literature standard)
+[2026-01-28 17:03:35] [INFO] Allow amendments: FALSE
+[2026-01-28 17:03:35] [INFO] Enable fallback to prior 10-K: TRUE
+[2026-01-28 17:03:35] [INFO] Start time: 2026-01-28 17:03:35
+[2026-01-28 17:03:35] [INFO] 
+[2026-01-28 17:03:35] [INFO] Loading deals with verified CIK identifiers...
+[2026-01-28 17:03:35] [INFO] Total deals loaded: 8986
+[2026-01-28 17:03:35] [INFO] Deals with CIK: 1238
+[2026-01-28 17:03:35] [INFO] Unique CIKs to query: 900
+[2026-01-28 17:03:35] [INFO] 
+[2026-01-28 17:03:35] [INFO] Querying EDGAR for company filing histories...
+[2026-01-28 17:03:35] [INFO] This may take several minutes depending on cache status...
+[2026-01-28 17:11:50] [INFO] 
+[2026-01-28 17:11:50] [INFO] EDGAR query complete in 495.5 seconds
+[2026-01-28 17:11:50] [INFO] Successfully queried: 900 CIKs (100%)
+[2026-01-28 17:11:50] [INFO] Failed queries: 0 CIKs
+[2026-01-28 17:11:50] [INFO] Total filings retrieved: 574154
+[2026-01-28 17:11:50] [INFO] 10-K filings available: 7088
+[2026-01-28 17:11:50] [INFO] 
+[2026-01-28 17:11:50] [INFO] Applying research design timing rules to select filings...
+[2026-01-28 17:11:59] [INFO] Filing selection complete in 9.3 seconds
+[2026-01-28 17:11:59] [INFO] 
+[2026-01-28 17:11:59] [INFO] Computing match statistics...
+[2026-01-28 17:11:59] [INFO] 
+[2026-01-28 17:11:59] [INFO] MATCH STATISTICS:
+[2026-01-28 17:11:59] [INFO]   Deals with CIK: 1238
+[2026-01-28 17:11:59] [INFO]   Successfully matched to 10-K: 267 (21.6%)
+[2026-01-28 17:11:59] [INFO]     Primary (most recent): 249
+[2026-01-28 17:11:59] [INFO]     Fallback (prior year): 18
+[2026-01-28 17:11:59] [INFO]   Unmatched: 971
+[2026-01-28 17:11:59] [INFO] 
+[2026-01-28 17:11:59] [INFO] Match status breakdown:
+[2026-01-28 17:11:59] [INFO]   no_10k_filings: 968 (78.2%)
+[2026-01-28 17:11:59] [INFO]   matched_primary: 249 (20.1%)
+[2026-01-28 17:11:59] [INFO]   matched_fallback: 18 (1.5%)
+[2026-01-28 17:11:59] [INFO]   no_qualifying_filing: 3 (0.2%)
+[2026-01-28 17:11:59] [INFO] 
+[2026-01-28 17:11:59] [INFO] Days between filing and announcement (matched deals):
+[2026-01-28 17:11:59] [INFO]   Min: 33 days
+[2026-01-28 17:11:59] [INFO]   25th percentile: 141 days
+[2026-01-28 17:11:59] [INFO]   Median: 225 days
+[2026-01-28 17:11:59] [INFO]   75th percentile: 315 days
+[2026-01-28 17:11:59] [INFO]   Max: 5429 days
+[2026-01-28 17:11:59] [INFO]   Mean: 302 days
+[2026-01-28 17:11:59] [INFO] 
+[2026-01-28 17:11:59] [INFO] Saving outputs...
+[2026-01-28 17:11:59] [INFO] ✓ Saved: data/interim/deals_with_filings.rds
+[2026-01-28 17:11:59] [INFO] ✓ Saved: data/interim/filing_identification_summary.json
+[2026-01-28 17:11:59] [INFO] 
+[2026-01-28 17:11:59] [INFO] Generating diagnostic visualizations...
+[2026-01-28 17:12:00] [INFO] ✓ Saved: output/filing_identification_diagnostics.pdf
+[2026-01-28 17:12:00] [INFO] 
+[2026-01-28 17:12:00] [INFO] =================================================================
+[2026-01-28 17:12:00] [INFO] FILING IDENTIFICATION COMPLETE
+[2026-01-28 17:12:00] [INFO] =================================================================
+[2026-01-28 17:12:00] [INFO] Total deals processed: 1238
+[2026-01-28 17:12:00] [INFO] Successfully matched: 267 (21.6%)
+[2026-01-28 17:12:00] [INFO] Unmatched: 971
+[2026-01-28 17:12:00] [INFO] Output saved: data/interim/deals_with_filings.rds
+[2026-01-28 17:12:00] [INFO] End time: 2026-01-28 17:12:00

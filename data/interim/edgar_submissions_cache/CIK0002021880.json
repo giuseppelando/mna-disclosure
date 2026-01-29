@@ -1,0 +1,70 @@
+{
+  "cik": "0002021880",
+  "entityType": "other",
+  "sic": "3533",
+  "sicDescription": "Oil & Gas Field Machinery & Equipment",
+  "ownerOrg": "01 Energy & Transportation",
+  "insiderTransactionForOwnerExists": 0,
+  "insiderTransactionForIssuerExists": 0,
+  "name": "HMH Holding Inc",
+  "tickers": "HMH",
+  "exchanges": null,
+  "ein": "992746883",
+  "lei": {},
+  "description": "",
+  "website": "",
+  "investorWebsite": "",
+  "category": "",
+  "fiscalYearEnd": "1231",
+  "stateOfIncorporation": "DE",
+  "stateOfIncorporationDescription": "DE",
+  "addresses": {
+    "mailing": {
+      "street1": "3300 NORTH SAM HOUSTON PARKWAY EAST",
+      "street2": {},
+      "city": "HOUSTON",
+      "stateOrCountry": "TX",
+      "zipCode": "77032",
+      "stateOrCountryDescription": "TX",
+      "isForeignLocation": 0,
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    },
+    "business": {
+      "street1": "3300 NORTH SAM HOUSTON PARKWAY EAST",
+      "street2": {},
+      "city": "HOUSTON",
+      "stateOrCountry": "TX",
+      "zipCode": "77032",
+      "stateOrCountryDescription": "TX",
+      "isForeignLocation": {},
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    }
+  },
+  "phone": "281-449-2000",
+  "flags": "",
+  "formerNames": [],
+  "filings": {
+    "recent": {
+      "accessionNumber": ["0001193125-25-274490", "0001193125-25-183265", "0001193125-25-123194", "0001193125-25-055773", "0001193125-25-013425", "0001193125-24-215959", "0001193125-24-206343", "0001193125-24-198984", "0000950123-24-006565", "0000950123-24-006078"],
+      "filingDate": ["2025-11-10", "2025-08-19", "2025-05-20", "2025-03-18", "2025-01-27", "2024-09-09", "2024-08-26", "2024-08-12", "2024-07-15", "2024-05-31"],
+      "reportDate": ["", "", "", "", "", "", "", "", "", ""],
+      "acceptanceDateTime": ["2025-11-10T16:57:58.000Z", "2025-08-19T12:52:03.000Z", "2025-05-20T16:42:26.000Z", "2025-03-18T06:12:42.000Z", "2025-01-27T17:00:19.000Z", "2024-09-09T16:45:41.000Z", "2024-08-23T20:36:00.000Z", "2024-08-12T17:10:42.000Z", "2024-07-15T15:19:04.000Z", "2024-05-31T17:03:18.000Z"],
+      "act": ["33", "33", "33", "33", "33", "33", "33", "33", "33", "33"],
+      "form": ["S-1/A", "S-1/A", "S-1/A", "S-1/A", "S-1/A", "S-1/A", "S-1/A", "S-1", "DRS/A", "DRS"],
+      "fileNumber": ["333-281497", "333-281497", "333-281497", "333-281497", "333-281497", "333-281497", "333-281497", "333-281497", "377-07255", "377-07255"],
+      "filmNumber": ["251467164", "251230495", "25969514", "25746430", "25559914", "241287758", "241237620", "241197882", "241117105", "241010703"],
+      "items": ["", "", "", "", "", "", "", "", "", ""],
+      "core_type": ["S-1/A", "S-1/A", "S-1/A", "S-1/A", "S-1/A", "S-1/A", "S-1/A", "S-1", "DRS/A", "DRS"],
+      "size": [8135172, 8376801, 8729044, 8548289, 7437316, 7320179, 1503227, 8907949, 6038762, 7303188],
+      "isXBRL": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "isInlineXBRL": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "primaryDocument": ["d31939ds1a.htm", "d915070ds1a.htm", "d915070ds1a.htm", "d915070ds1a.htm", "d915070ds1a.htm", "d835350ds1a.htm", "d835350ds1a.htm", "d835350ds1.htm", "filename1.htm", "filename1.htm"],
+      "primaryDocDescription": ["S-1/A", "S-1/A", "S-1/A", "S-1/A", "S-1/A", "S-1/A", "S-1/A", "S-1", "", ""]
+    },
+    "files": []
+  }
+}

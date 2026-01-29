@@ -1,0 +1,10 @@
+[2026-01-29 02:00:41] [INFO] =================================================================
+[2026-01-29 02:00:41] [INFO] SAMPLE RESTRICTION CASCADE
+[2026-01-29 02:00:41] [INFO] =================================================================
+[2026-01-29 02:00:41] [INFO] Input: data/interim/deals_ingested.rds
+[2026-01-29 02:00:41] [INFO] Output: data/interim/deals_sample_restricted.rds
+[2026-01-29 02:00:41] [INFO] Start time: 2026-01-29 02:00:41
+[2026-01-29 02:00:41] [INFO] 
+[2026-01-29 02:00:41] [INFO] Loading ingested dataset...
+[2026-01-29 02:00:41] [INFO] Loaded: 8239 deals
+[2026-01-29 02:00:41] [ERROR] Missing required flag columns: flag_has_target_id, flag_control_transfer, flag_has_offer_price

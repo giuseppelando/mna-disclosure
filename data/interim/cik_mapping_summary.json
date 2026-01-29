@@ -1,0 +1,70 @@
+{
+  "input_file": "data/interim/deals_sample_restricted.rds",
+  "output_file": "data/interim/deals_with_cik.rds",
+  "processing_date": "2026-01-29 02:38:54.313788",
+  "sec_mapping_url": "https://www.sec.gov/files/company_tickers.json",
+  "n_deals": 8986,
+  "n_with_ticker": 8940,
+  "n_matched": 1238,
+  "n_unmatched": 7748,
+  "pct_matched": 13.8,
+  "match_status_breakdown": [
+    {
+      "cik_match_status": "matched",
+      "n": 1238,
+      "pct": 13.8
+    },
+    {
+      "cik_match_status": "no_ticker",
+      "n": 46,
+      "pct": 0.5
+    },
+    {
+      "cik_match_status": "ticker_not_in_sec",
+      "n": 7702,
+      "pct": 85.7
+    }
+  ],
+  "sample_unmatched_tickers": [
+    {
+      "ticker": "TWX",
+      "name": "TIME WARNER INC.(OLD)"
+    },
+    {
+      "ticker": "WLA",
+      "name": "WARNER-LAMBERT COMPANY"
+    },
+    {
+      "ticker": "TWX",
+      "name": "TIME WARNER INC."
+    },
+    {
+      "ticker": "TFCFA",
+      "name": "TWENTY-FIRST CENTURY FOX INC."
+    },
+    {
+      "ticker": "TWC",
+      "name": "TIME WARNER CABLE INC."
+    },
+    {
+      "ticker": "AET",
+      "name": "AETNA INC."
+    },
+    {
+      "ticker": "CELG",
+      "name": "CELGENE CORPORATION"
+    },
+    {
+      "ticker": "AGN",
+      "name": "ALLERGAN INC."
+    },
+    {
+      "ticker": "ATVI",
+      "name": "ACTIVISION BLIZZARD INC."
+    },
+    {
+      "ticker": "VMW",
+      "name": "VMWARE INC."
+    }
+  ]
+}

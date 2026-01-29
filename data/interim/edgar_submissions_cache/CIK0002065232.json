@@ -1,0 +1,70 @@
+{
+  "cik": "0002065232",
+  "entityType": "other",
+  "sic": "5190",
+  "sicDescription": "Wholesale-Miscellaneous Nondurable Goods",
+  "ownerOrg": "07 Trade & Services",
+  "insiderTransactionForOwnerExists": 0,
+  "insiderTransactionForIssuerExists": 0,
+  "name": "Fitness Fanatics Ltd",
+  "tickers": "FIT",
+  "exchanges": null,
+  "ein": "000000000",
+  "lei": {},
+  "description": "",
+  "website": "",
+  "investorWebsite": "",
+  "category": "",
+  "fiscalYearEnd": "1231",
+  "stateOfIncorporation": "",
+  "stateOfIncorporationDescription": "",
+  "addresses": {
+    "mailing": {
+      "street1": "15,BLOCK F,UG/F., WAH LOK INDUSTRIAL CTR",
+      "street2": "31-35 SHAN MEI STREET,",
+      "city": "FO TAN, NEW TERRITORIES",
+      "stateOrCountry": {},
+      "zipCode": "00000",
+      "stateOrCountryDescription": {},
+      "isForeignLocation": 1,
+      "foreignStateTerritory": "HONG KONG",
+      "country": "Hong Kong",
+      "countryCode": "K3"
+    },
+    "business": {
+      "street1": "15,BLOCK F,UG/F., WAH LOK INDUSTRIAL CTR",
+      "street2": "31-35 SHAN MEI STREET,",
+      "city": "FO TAN, NEW TERRITORIES",
+      "stateOrCountry": {},
+      "zipCode": "00000",
+      "stateOrCountryDescription": {},
+      "isForeignLocation": 1,
+      "foreignStateTerritory": "HONG KONG",
+      "country": "Hong Kong",
+      "countryCode": "K3"
+    }
+  },
+  "phone": "852 3100 0001",
+  "flags": "",
+  "formerNames": [],
+  "filings": {
+    "recent": {
+      "accessionNumber": ["9999999995-25-003344", "0001493152-25-019212", "9999999995-25-003201", "0001493152-25-014444", "0001493152-25-012787", "0001493152-25-012232", "0001493152-25-011805", "0001641172-25-018095", "0001641172-25-016819", "0001641172-25-014995", "0001641172-25-008267"],
+      "filingDate": ["2025-11-21", "2025-10-24", "2025-09-30", "2025-09-22", "2025-09-08", "2025-08-22", "2025-08-11", "2025-07-08", "2025-06-27", "2025-06-13", "2025-05-02"],
+      "reportDate": ["", "", "", "", "", "", "", "", "", "", ""],
+      "acceptanceDateTime": ["2025-11-24T05:15:20.000Z", "2025-10-24T15:27:13.000Z", "2025-10-01T04:15:29.000Z", "2025-09-22T18:35:22.000Z", "2025-09-08T13:31:23.000Z", "2025-08-22T13:22:55.000Z", "2025-08-11T20:20:30.000Z", "2025-07-08T12:15:52.000Z", "2025-06-27T13:30:30.000Z", "2025-06-13T13:30:34.000Z", "2025-05-02T15:17:51.000Z"],
+      "act": ["33", "33", "33", "33", "33", "33", "33", "33", "33", "33", "33"],
+      "form": ["EFFECT", "POS AM", "EFFECT", "F-1/A", "F-1/A", "F-1/A", "F-1", "DRS/A", "DRS/A", "DRS/A", "DRS"],
+      "fileNumber": ["333-289484", "333-289484", "333-289484", "333-289484", "333-289484", "333-289484", "333-289484", "377-07969", "377-07969", "377-07969", "377-07969"],
+      "filmNumber": ["251509463", "251415142", "251362389", "251329682", "251298784", "251242509", "251202300", "251109565", "251082618", "251044905", "25906370"],
+      "items": [",,", "", ",,", "", "", "", "", "", "", "", ""],
+      "core_type": ["EFFECT", "POS AM", "EFFECT", "F-1/A", "F-1/A", "F-1/A", "F-1", "DRS/A", "DRS/A", "DRS/A", "DRS"],
+      "size": [2019, 9161448, 2006, 3542936, 69533324, 3668153, 90728000, 3650699, 3646905, 13278233, 3429327],
+      "isXBRL": [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+      "isInlineXBRL": [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+      "primaryDocument": ["xslEFFECTX01/primary_doc.xml", "formposam.htm", "xslEFFECTX01/primary_doc.xml", "formf-1a.htm", "formf-1a.htm", "formf-1a.htm", "formf-1.htm", "filename1.htm", "filename1.htm", "filename1.htm", "filename1.htm"],
+      "primaryDocDescription": ["", "POS AM", "", "F-1/A", "F-1/A", "F-1/A", "F-1", "", "", "", ""]
+    },
+    "files": []
+  }
+}

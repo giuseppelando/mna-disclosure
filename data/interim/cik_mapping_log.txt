@@ -1,0 +1,26 @@
+[2026-01-29 02:52:25] [INFO] =================================================================
+[2026-01-29 02:52:25] [INFO] CIK MAPPING (Ticker to CIK Identifier)
+[2026-01-29 02:52:25] [INFO] =================================================================
+[2026-01-29 02:52:25] [INFO] Input: data/processed/deals_restricted.rds
+[2026-01-29 02:52:25] [INFO] Output: data/interim/deals_with_cik.rds
+[2026-01-29 02:52:25] [INFO] Start time: 2026-01-29 02:52:25
+[2026-01-29 02:52:25] [INFO] 
+[2026-01-29 02:52:25] [INFO] Loading restricted deals dataset...
+[2026-01-29 02:52:25] [INFO] Loaded: 5463 deals
+[2026-01-29 02:52:25] [INFO] Deals with ticker: 5414 (99.1%)
+[2026-01-29 02:52:25] [INFO] Deals without ticker: 49
+[2026-01-29 02:52:25] [INFO] 
+[2026-01-29 02:52:25] [INFO] Retrieving SEC company tickers mapping...
+[2026-01-29 02:52:25] [DEBUG] URL: https://www.sec.gov/files/company_tickers.json
+[2026-01-29 02:52:25] [INFO] ✓ SEC mapping file downloaded successfully
+[2026-01-29 02:52:26] [INFO] SEC mapping contains 10317 entries
+[2026-01-29 02:52:26] [INFO] 
+[2026-01-29 02:52:26] [INFO] Preparing ticker-CIK lookup table...
+[2026-01-29 02:52:26] [INFO] Lookup table: 10317 unique tickers
+[2026-01-29 02:52:26] [INFO] ✓ Saved lookup table: data/interim/ticker_cik_lookup.csv
+[2026-01-29 02:52:26] [INFO] 
+[2026-01-29 02:52:26] [INFO] Matching deals to CIK identifiers...
+[2026-01-29 02:52:26] [INFO] 
+[2026-01-29 02:52:26] [INFO] Computing match statistics...
+[2026-01-29 02:52:26] [INFO] Matched to CIK: 0 deals (0%)
+[2026-01-29 02:52:26] [INFO] Unmatched: 5463 deals

@@ -1,0 +1,70 @@
+{
+  "cik": "0002080921",
+  "entityType": "other",
+  "sic": "5172",
+  "sicDescription": "Wholesale-Petroleum & Petroleum Products (No Bulk Stations)",
+  "ownerOrg": "07 Trade & Services",
+  "insiderTransactionForOwnerExists": 0,
+  "insiderTransactionForIssuerExists": 0,
+  "name": "ARKO Petroleum Corp.",
+  "tickers": "APC",
+  "exchanges": null,
+  "ein": "393168808",
+  "lei": {},
+  "description": "",
+  "website": "",
+  "investorWebsite": "",
+  "category": "",
+  "fiscalYearEnd": "1231",
+  "stateOfIncorporation": "DE",
+  "stateOfIncorporationDescription": "DE",
+  "addresses": {
+    "mailing": {
+      "street1": "8565 MAGELLAN PKWY., STE 400",
+      "street2": {},
+      "city": "RICHMOND",
+      "stateOrCountry": "VA",
+      "zipCode": "23227",
+      "stateOrCountryDescription": "VA",
+      "isForeignLocation": 0,
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    },
+    "business": {
+      "street1": "8565 MAGELLAN PKWY., STE 400",
+      "street2": {},
+      "city": "RICHMOND",
+      "stateOrCountry": "VA",
+      "zipCode": "23227",
+      "stateOrCountryDescription": "VA",
+      "isForeignLocation": {},
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    }
+  },
+  "phone": "804-730-1568",
+  "flags": "",
+  "formerNames": [],
+  "filings": {
+    "recent": {
+      "accessionNumber": ["0001193125-26-015868", "0001193125-25-325826", "0001193125-25-203727"],
+      "filingDate": ["2026-01-20", "2025-12-19", "2025-09-15"],
+      "reportDate": ["", "", ""],
+      "acceptanceDateTime": ["2026-01-20T11:03:15.000Z", "2025-12-19T13:30:52.000Z", "2025-09-15T20:56:56.000Z"],
+      "act": ["33", "33", "33"],
+      "form": ["S-1/A", "S-1", "DRS"],
+      "fileNumber": ["333-292265", "333-292265", "377-08463"],
+      "filmNumber": ["26540948", "251585142", "251314905"],
+      "items": ["", "", ""],
+      "core_type": ["S-1/A", "S-1", "DRS"],
+      "size": [6852894, 5574423, 5612891],
+      "isXBRL": [0, 1, 0],
+      "isInlineXBRL": [0, 1, 0],
+      "primaryDocument": ["d928360ds1a.htm", "d928360ds1.htm", "filename1.htm"],
+      "primaryDocDescription": ["S-1/A", "S-1", ""]
+    },
+    "files": []
+  }
+}

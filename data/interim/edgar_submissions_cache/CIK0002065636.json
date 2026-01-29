@@ -1,0 +1,70 @@
+{
+  "cik": "0002065636",
+  "entityType": "other",
+  "sic": "1600",
+  "sicDescription": "Heavy Construction Other Than Bldg Const - Contractors",
+  "ownerOrg": "05 Real Estate & Construction",
+  "insiderTransactionForOwnerExists": 0,
+  "insiderTransactionForIssuerExists": 0,
+  "name": "SOLV Energy, Inc.",
+  "tickers": [],
+  "exchanges": [],
+  "ein": "000000000",
+  "lei": {},
+  "description": "",
+  "website": "",
+  "investorWebsite": "",
+  "category": "",
+  "fiscalYearEnd": "1231",
+  "stateOfIncorporation": "DE",
+  "stateOfIncorporationDescription": "DE",
+  "addresses": {
+    "mailing": {
+      "street1": "16680 WEST BERNARDO DRIVE",
+      "street2": {},
+      "city": "SAN DIEGO",
+      "stateOrCountry": "CA",
+      "zipCode": "92127",
+      "stateOrCountryDescription": "CA",
+      "isForeignLocation": 0,
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    },
+    "business": {
+      "street1": "16680 WEST BERNARDO DRIVE",
+      "street2": {},
+      "city": "SAN DIEGO",
+      "stateOrCountry": "CA",
+      "zipCode": "92127",
+      "stateOrCountryDescription": "CA",
+      "isForeignLocation": {},
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    }
+  },
+  "phone": "8582514888",
+  "flags": "",
+  "formerNames": [],
+  "filings": {
+    "recent": {
+      "accessionNumber": ["0001193125-26-021044", "0001193125-26-015169", "0001193125-25-327082", "0000950123-25-006352", "0000950123-25-006067", "0000950123-25-004508"],
+      "filingDate": ["2026-01-23", "2026-01-16", "2025-12-19", "2025-07-11", "2025-06-18", "2025-05-09"],
+      "reportDate": ["", "", "", "", "", ""],
+      "acceptanceDateTime": ["2026-01-23T21:09:14.000Z", "2026-01-16T19:50:36.000Z", "2025-12-19T22:15:39.000Z", "2025-07-11T21:18:28.000Z", "2025-06-18T21:29:13.000Z", "2025-05-09T21:03:46.000Z"],
+      "act": ["33", "33", "33", "33", "33", "33"],
+      "form": ["S-1/A", "S-1", "DRS/A", "DRS/A", "DRS/A", "DRS"],
+      "fileNumber": ["333-292778", "333-292778", "377-07993", "377-07993", "377-07993", "377-07993"],
+      "filmNumber": ["26556514", "26539000", "251588536", "251119708", "251057956", "25931483"],
+      "items": ["", "", "", "", "", ""],
+      "core_type": ["S-1/A", "S-1", "DRS/A", "DRS/A", "DRS/A", "DRS"],
+      "size": [2057562, 10795096, 3476050, 2565122, 4036609, 2478876],
+      "isXBRL": [0, 1, 0, 0, 0, 0],
+      "isInlineXBRL": [0, 1, 0, 0, 0, 0],
+      "primaryDocument": ["d12408ds1a.htm", "d12408ds1.htm", "filename1.htm", "filename1.htm", "filename1.htm", "filename1.htm"],
+      "primaryDocDescription": ["S-1/A", "S-1", "", "", "", ""]
+    },
+    "files": []
+  }
+}

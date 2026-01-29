@@ -1,0 +1,74 @@
+{
+  "input_file": "data/interim/deals_ingested.rds",
+  "output_file": "data/interim/deals_sample_restricted.rds",
+  "processing_date": "2026-01-27 18:51:26.894361",
+  "n_start": 10131,
+  "n_final": 8986,
+  "n_excluded": 1145,
+  "pct_retained": 88.7,
+  "restrictions_applied": ["target_identifiable", "announcement_date", "terminal_outcome", "control_transfer"],
+  "cascade_steps": {
+    "start": {
+      "step_name": "Starting sample (after ingestion)",
+      "n_before": 10131,
+      "n_excluded": 0,
+      "n_after": 10131,
+      "pct_remaining": 100,
+      "pct_of_start": 100
+    },
+    "step_1": {
+      "step_name": "Target has ticker symbol or company name",
+      "design_reference": "DL-02",
+      "n_before": 10131,
+      "n_excluded": 138,
+      "n_after": 9993,
+      "pct_remaining": 98.6,
+      "pct_of_start": 98.6
+    },
+    "step_2": {
+      "step_name": "Non-missing announcement date",
+      "design_reference": "DL-04",
+      "n_before": 9993,
+      "n_excluded": 221,
+      "n_after": 9772,
+      "pct_remaining": 97.8,
+      "pct_of_start": 96.5
+    },
+    "step_3": {
+      "step_name": "Deal status is Completed or Withdrawn",
+      "design_reference": "DL-03",
+      "n_before": 9772,
+      "n_excluded": 667,
+      "n_after": 9105,
+      "pct_remaining": 93.2,
+      "pct_of_start": 89.9
+    },
+    "step_4": {
+      "step_name": "Transaction constitutes control transfer (stake >= 50% or acquisition/merger type)",
+      "design_reference": "DL-09",
+      "n_before": 9105,
+      "n_excluded": 119,
+      "n_after": 8986,
+      "pct_remaining": 98.7,
+      "pct_of_start": 88.7
+    },
+    "quality_date_logic": {
+      "step_name": "Completion/withdrawal date not before announcement date",
+      "design_reference": "Data quality",
+      "n_before": 8986,
+      "n_excluded": 0,
+      "n_after": 8986,
+      "pct_remaining": 100,
+      "pct_of_start": 88.7
+    },
+    "quality_negative_values": {
+      "step_name": "Non-negative deal value and offer price (where non-missing)",
+      "design_reference": "Data quality",
+      "n_before": 8986,
+      "n_excluded": 0,
+      "n_after": 8986,
+      "pct_remaining": 100,
+      "pct_of_start": 88.7
+    }
+  }
+}

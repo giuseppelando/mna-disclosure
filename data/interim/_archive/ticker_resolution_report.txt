@@ -1,0 +1,80 @@
+=======================================================================
+HISTORICAL TICKER RESOLUTION VALIDATION REPORT
+=======================================================================
+
+SUMMARY:
+  Processing date: 2026-01-27
+  Total deals: 8986
+  Unique tickers: 6682
+
+MATCH RESULTS:
+  Successfully matched: 1861 deals (20.7%)
+  Unmatched: 7125 deals
+
+MATCH SOURCES:
+  SEC bulk (current tickers): 1239 deals
+  EDGAR search (historical): 622 deals
+
+CACHE STATUS:
+  Total cached mappings: 1384
+  From SEC bulk: 902
+  From EDGAR search: 482
+
+TOP 20 EDGAR-RESOLVED TICKERS:
+(Companies resolved via historical EDGAR search)
+
+  ATVI: ATVISO LTD  (see all company filings) (CIK: 0001165957)
+  RTN: QUANTITATIVE ALPHA TRADING INC.  (see all company filings) (CIK: 0001036140)
+  ANSS: ANSS-FL DBA ACCESS NATIONAL SETTLEMENT SERVICES L L C  (see all company filings) (CIK: 0001269936)
+  CPQ: CPQ HOLDINGS INC  (see all company filings) (CIK: 0001079812)
+  GDT: GDT TEK, Inc.  (see all company filings) (CIK: 0000880584)
+  HNZ: HNZLLQ GLOBAL Ltd.  (see all company filings) (CIK: 0002092648)
+  PGN: PGN Real Estate, LLC  (see all company filings) (CIK: 0001952910)
+  MWV: MWV PINNACLE CAPITAL FUND LP  (see all company filings) (CIK: 0001307836)
+  SWAV: MARIZYME, INC.  (see all company filings) (CIK: 0001413754)
+  NGH: NGHBR INC  (see all company filings) (CIK: 0001885405)
+  SOTR: SOTRAIDIS STEVE B  (see all company filings) (CIK: 0001218018)
+  NFB: CAPITAL ONE INVESTMENT SERVICES LLC  (see all company filings) (CIK: 0000857484)
+  MYOK: MyoKardia, Inc.  (see all company filings) (CIK: 0001552451)
+  BECN: Becnel Andrew P  (see all company filings) (CIK: 0001340368)
+  CBSS: CBSS LLC  (see all company filings) (CIK: 0001364480)
+  WLL: WLLA Investment Partners, LP  (see all company filings) (CIK: 0001555462)
+  MDCO: MDconnectME, Inc.  (see all company filings) (CIK: 0001521447)
+  AZEK: Azek Building Products Inc.  (see all company filings) (CIK: 0001356713)
+  RLM: RLM Capital Partners, L.P.  (see all company filings) (CIK: 0001589265)
+  NMX: Net Medical Xpress Solutions, Inc.  (see all company filings) (CIK: 0001101865)
+
+SAMPLE UNMATCHED TICKERS:
+
+  TWX: TIME WARNER INC.(OLD)
+  WLA: WARNER-LAMBERT COMPANY
+  TWX: TIME WARNER INC.
+  TFCFA: TWENTY-FIRST CENTURY FOX INC.
+  TWC: TIME WARNER CABLE INC.
+  AET: AETNA INC.
+  CELG: CELGENE CORPORATION
+  AGN: ALLERGAN INC.
+  VMW: VMWARE INC.
+  KMP: KINDER MORGAN ENERGY PARTNERS LP
+  DTV: DIRECTV LLC
+  PXD: PIONEER NATURAL RESOURCES COMPANY
+  EMC: EMC CORPORATION
+  ESRX: EXPRESS SCRIPTS HOLDING COMPANY
+  MON: MONSANTO COMPANY
+  HES: HESS CORPORATION
+  BLS: BELLSOUTH CORPORATION
+  ONE: BANK ONE CORPORATION
+  WYE: WYETH LLC
+  SDLI: SDL INC.
+
+=======================================================================
+
+NOTES:
+  - Cache file preserves all discovered mappings for future runs
+  - EDGAR search respects SEC rate limits (150ms between queries)
+  - Unmatched tickers may be non-US or never filed with SEC
+
+  Cache location: data/interim/ticker_cik_cache.rds
+  Log file: data/interim/ticker_resolution_test_log.txt
+
+=======================================================================

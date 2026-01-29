@@ -1,0 +1,70 @@
+{
+  "cik": "0001788451",
+  "entityType": "other",
+  "sic": "6411",
+  "sicDescription": "Insurance Agents, Brokers & Service",
+  "ownerOrg": "02 Finance",
+  "insiderTransactionForOwnerExists": 0,
+  "insiderTransactionForIssuerExists": 0,
+  "name": "Ethos Technologies Inc.",
+  "tickers": "LIFE",
+  "exchanges": null,
+  "ein": "813181024",
+  "lei": {},
+  "description": "",
+  "website": "",
+  "investorWebsite": "",
+  "category": "",
+  "fiscalYearEnd": "1231",
+  "stateOfIncorporation": "DE",
+  "stateOfIncorporationDescription": "DE",
+  "addresses": {
+    "mailing": {
+      "street1": "1606 HEADWAY CIRCLE",
+      "street2": "#9013",
+      "city": "AUSTIN",
+      "stateOrCountry": "TX",
+      "zipCode": "78754",
+      "stateOrCountryDescription": "TX",
+      "isForeignLocation": 0,
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    },
+    "business": {
+      "street1": "1606 HEADWAY CIRCLE",
+      "street2": "#9013",
+      "city": "AUSTIN",
+      "stateOrCountry": "TX",
+      "zipCode": "78754",
+      "stateOrCountryDescription": "TX",
+      "isForeignLocation": {},
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    }
+  },
+  "phone": "(415) 915-0665",
+  "flags": "",
+  "formerNames": [],
+  "filings": {
+    "recent": {
+      "accessionNumber": ["0001193125-26-018153", "0001193125-26-015943", "0001193125-25-309928", "0001193125-25-219975", "0000950123-25-008597", "0000950123-25-006749", "0000950123-25-006002", "0001788451-22-000002", "0001788451-21-000001", "0001664658-21-000001", "0001788451-19-000002", "0001788451-19-000001"],
+      "filingDate": ["2026-01-21", "2026-01-20", "2025-12-05", "2025-09-26", "2025-08-27", "2025-07-30", "2025-06-12", "2022-01-24", "2021-08-09", "2021-05-14", "2019-09-18", "2019-09-18"],
+      "reportDate": ["", "", "", "", "", "", "", "", "", "", "", ""],
+      "acceptanceDateTime": ["2026-01-21T22:08:15.000Z", "2026-01-20T11:57:01.000Z", "2025-12-05T22:21:37.000Z", "2025-09-26T17:04:25.000Z", "2025-08-27T01:53:09.000Z", "2025-07-29T23:21:02.000Z", "2025-06-12T00:29:39.000Z", "2022-01-24T21:19:49.000Z", "2021-08-09T21:09:47.000Z", "2021-05-14T15:02:00.000Z", "2019-09-18T20:52:43.000Z", "2019-09-18T19:15:23.000Z"],
+      "act": ["34", "33", "33", "33", "33", "33", "33", "33", "33", "33", "33", "33"],
+      "form": ["8-A12B", "S-1/A", "S-1/A", "S-1", "DRS/A", "DRS/A", "DRS", "D", "D", "D", "D", "D"],
+      "fileNumber": ["001-43065", "333-290534", "333-290534", "333-290534", "377-08100", "377-08100", "377-08100", "021-430588", "021-409319", "021-399410", "021-349178", "021-349161"],
+      "filmNumber": ["26548798", "26541081", "251553910", "251348522", "251259489", "251163544", "251041424", "22549588", "211157383", "21922668", "191100247", "191099668"],
+      "items": ["", "", "", "", "", "", "", "06b", "06b", "06b", "06b", "06b"],
+      "core_type": ["8-A12B", "S-1/A", "S-1/A", "S-1", "DRS/A", "DRS/A", "DRS", "D", "D", "D", "D", "D"],
+      "size": [13917, 9856523, 7983862, 9747205, 5001066, 4252113, 5019387, 13696, 13702, 12045, 10284, 10284],
+      "isXBRL": [0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+      "isInlineXBRL": [0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+      "primaryDocument": ["d75276d8a12b.htm", "d901135ds1a.htm", "d901135ds1a.htm", "d901135ds1.htm", "filename1.htm", "filename1.htm", "filename1.htm", "xslFormDX01/primary_doc.xml", "xslFormDX01/primary_doc.xml", "xslFormDX01/primary_doc.xml", "xslFormDX01/primary_doc.xml", "xslFormDX01/primary_doc.xml"],
+      "primaryDocDescription": ["8-A12B", "S-1/A", "S-1/A", "S-1", "", "", "", "", "", "", "", ""]
+    },
+    "files": []
+  }
+}

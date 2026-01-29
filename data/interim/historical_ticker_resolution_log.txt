@@ -1,0 +1,14 @@
+[2026-01-29 02:28:44] [INFO] =================================================================
+[2026-01-29 02:28:44] [INFO] HISTORICAL TICKER-CIK DATABASE CONSTRUCTION
+[2026-01-29 02:28:44] [INFO] =================================================================
+[2026-01-29 02:28:44] [INFO] Start: 2026-01-29 02:28:44.447086
+[2026-01-29 02:28:44] [INFO] 
+[2026-01-29 02:28:44] [INFO] Loading deals data...
+[2026-01-29 02:28:44] [INFO] Loaded 8986 deals
+[2026-01-29 02:28:44] [INFO] 
+[2026-01-29 02:28:44] [INFO] Building historical ticker-CIK mapping...
+026-01-29 02:32:25] [INFO] Starting with 0 verified CIKs from bulk matching
+[2026-01-29 02:32:25] [INFO] Extracting ticker info from submissions cache...
+[2026-01-29 02:32:25] [INFO] Found ticker info for 0 CIKs
+[2026-01-29 02:32:25] [WARN] No ticker mappings extracted
+[2026-01-29 02:32:25] [ERROR] Failed to build historical database

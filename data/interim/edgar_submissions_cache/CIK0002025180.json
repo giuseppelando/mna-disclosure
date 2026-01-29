@@ -1,0 +1,70 @@
+{
+  "cik": "0002025180",
+  "entityType": "other",
+  "sic": "",
+  "sicDescription": "",
+  "ownerOrg": "",
+  "insiderTransactionForOwnerExists": 0,
+  "insiderTransactionForIssuerExists": 0,
+  "name": "China Tobacco & Alcohol Group Ltd",
+  "tickers": "ZY",
+  "exchanges": null,
+  "ein": "000000000",
+  "lei": {},
+  "description": "",
+  "website": "",
+  "investorWebsite": "",
+  "category": "",
+  "fiscalYearEnd": "0630",
+  "stateOfIncorporation": "K3",
+  "stateOfIncorporationDescription": "Hong Kong",
+  "addresses": {
+    "mailing": {
+      "street1": "RM 18, 15F, MAI WO IND BLDG",
+      "street2": "90-98 KWAI CHEONG RD",
+      "city": "NT",
+      "stateOrCountry": "K3",
+      "zipCode": "999077",
+      "stateOrCountryDescription": "Hong Kong",
+      "isForeignLocation": 0,
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    },
+    "business": {
+      "street1": "RM 18, 15F, MAI WO IND BLDG",
+      "street2": "90-98 KWAI CHEONG RD",
+      "city": "NT",
+      "stateOrCountry": "K3",
+      "zipCode": "999077",
+      "stateOrCountryDescription": "Hong Kong",
+      "isForeignLocation": {},
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    }
+  },
+  "phone": "85251626310",
+  "flags": "",
+  "formerNames": [],
+  "filings": {
+    "recent": {
+      "accessionNumber": "0002025180-25-000005",
+      "filingDate": "2025-08-06",
+      "reportDate": "",
+      "acceptanceDateTime": "2025-08-06T06:07:32.000Z",
+      "act": "33",
+      "form": "F-1",
+      "fileNumber": "333-289282",
+      "filmNumber": "251187274",
+      "items": "",
+      "core_type": "F-1",
+      "size": 269350,
+      "isXBRL": 0,
+      "isInlineXBRL": 0,
+      "primaryDocument": "chinata0806f.htm",
+      "primaryDocDescription": "FORM F1"
+    },
+    "files": []
+  }
+}

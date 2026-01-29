@@ -1,0 +1,8 @@
+{
+  "processing_date": "2026-01-29",
+  "input_file": "Deals_v1a.xlsx",
+  "n_rows_raw": 9507,
+  "n_rows_final": 9507,
+  "n_columns_raw": 52,
+  "n_columns_kept": 62
+}

@@ -1,0 +1,56 @@
+=======================================================================
+M&A DEAL DATA INGESTION SUMMARY
+=======================================================================
+
+INPUT:
+  File: Deals_v1.xlsx
+  Processing date: 2026-01-28 18:40:34.250051
+
+SAMPLE SIZE CASCADE:
+  Raw data loaded: 14463 rows
+  Empty rows removed: 0
+  Duplicates removed: 4332
+  Final dataset: 10131 rows
+
+COLUMN MAPPING:
+  Raw columns: 21
+  Mapped to schema: 20
+  Required missing: 0
+
+DEAL OUTCOME DISTRIBUTION:
+  Completed: 7722 (76.2%)
+  Withdrawn: 1548 (15.3%)
+  Completed Assumed: 668 (6.6%)
+  Other: 193 (1.9%)
+
+SAMPLE FILTER READINESS:
+  Terminal outcome (Completed/Withdrawn): 9270
+  Has announcement date: 9772
+  Control transfer indicator: 9952
+  Has offer price (premium analysis): 6616
+  US listed: 5547
+
+TIME PERIOD:
+  Announcement dates: 1996-10-31 to 2026-01-09
+
+INDUSTRY COVERAGE:
+  Deals with SIC code: 10116 (99.9%)
+  Top 5 industries: Manufacturing (n=3277); Services (n=2318); Finance (n=2106); Transportation (n=886); Wholesale_Retail (n=773)
+
+DATA QUALITY:
+  Quality checks failed: 2
+  See data/interim/deals_quality_issues.csv for details
+
+OUTPUT:
+  Main dataset: data/interim/deals_ingested.rds
+  Column mapping: data/interim/deals_column_mapping.csv
+  Processing log: data/interim/deals_ingestion_log.txt
+
+NEXT STEPS:
+  1. Apply sample restrictions (see Sample_Blueprint_ruleset.pdf)
+  2. Collapse competing bid episodes (DL-06)
+  3. Match to 10-K filings via CIK
+  4. Construct NLP indices from 10-K text
+  5. Merge with financial controls and construct premium variable
+
+=======================================================================

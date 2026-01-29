@@ -1,0 +1,70 @@
+{
+  "cik": "0002095443",
+  "entityType": "other",
+  "sic": "",
+  "sicDescription": "",
+  "ownerOrg": "",
+  "insiderTransactionForOwnerExists": 0,
+  "insiderTransactionForIssuerExists": 0,
+  "name": "Breeze Acquisition Corp. II",
+  "tickers": [],
+  "exchanges": [],
+  "ein": "981887558",
+  "lei": {},
+  "description": "",
+  "website": "",
+  "investorWebsite": "",
+  "category": "",
+  "fiscalYearEnd": "1231",
+  "stateOfIncorporation": "E9",
+  "stateOfIncorporationDescription": "Cayman Islands",
+  "addresses": {
+    "mailing": {
+      "street1": "955 W. JOHN CARPENTER FWY",
+      "street2": "SUITE 100-929",
+      "city": "IRVING",
+      "stateOrCountry": "TX",
+      "zipCode": "75039",
+      "stateOrCountryDescription": "TX",
+      "isForeignLocation": 0,
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    },
+    "business": {
+      "street1": "955 W. JOHN CARPENTER FWY",
+      "street2": "SUITE 100-929",
+      "city": "IRVING",
+      "stateOrCountry": "TX",
+      "zipCode": "75039",
+      "stateOrCountryDescription": "TX",
+      "isForeignLocation": {},
+      "foreignStateTerritory": {},
+      "country": {},
+      "countryCode": {}
+    }
+  },
+  "phone": "888-273-9001",
+  "flags": "",
+  "formerNames": [],
+  "filings": {
+    "recent": {
+      "accessionNumber": "0001213900-25-111161",
+      "filingDate": "2025-11-17",
+      "reportDate": "",
+      "acceptanceDateTime": "2025-11-17T14:54:00.000Z",
+      "act": "33",
+      "form": "S-1",
+      "fileNumber": "333-291575",
+      "filmNumber": "251489634",
+      "items": "",
+      "core_type": "XBRL",
+      "size": 3367963,
+      "isXBRL": 1,
+      "isInlineXBRL": 1,
+      "primaryDocument": "ea0260326-s1_breeze2.htm",
+      "primaryDocDescription": "REGISTRATION STATEMENT"
+    },
+    "files": []
+  }
+}

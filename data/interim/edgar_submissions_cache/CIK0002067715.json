@@ -1,0 +1,70 @@
+{
+  "cik": "0002067715",
+  "entityType": "other",
+  "sic": "7371",
+  "sicDescription": "Services-Computer Programming Services",
+  "ownerOrg": "06 Technology",
+  "insiderTransactionForOwnerExists": 0,
+  "insiderTransactionForIssuerExists": 0,
+  "name": "Altech Digital Co., Ltd.",
+  "tickers": "ALD",
+  "exchanges": null,
+  "ein": "000000000",
+  "lei": {},
+  "description": "",
+  "website": "",
+  "investorWebsite": "",
+  "category": "",
+  "fiscalYearEnd": "0331",
+  "stateOfIncorporation": "E9",
+  "stateOfIncorporationDescription": "Cayman Islands",
+  "addresses": {
+    "mailing": {
+      "street1": "89 NEXUS WAY, CAMANA BAY",
+      "street2": {},
+      "city": "GRAND CAYMAN",
+      "stateOrCountry": {},
+      "zipCode": "KY1-9009",
+      "stateOrCountryDescription": {},
+      "isForeignLocation": 1,
+      "foreignStateTerritory": {},
+      "country": "Cayman Islands",
+      "countryCode": "E9"
+    },
+    "business": {
+      "street1": "89 NEXUS WAY, CAMANA BAY",
+      "street2": {},
+      "city": "GRAND CAYMAN",
+      "stateOrCountry": {},
+      "zipCode": "KY1-9009",
+      "stateOrCountryDescription": {},
+      "isForeignLocation": 1,
+      "foreignStateTerritory": {},
+      "country": "Cayman Islands",
+      "countryCode": "E9"
+    }
+  },
+  "phone": "852-9733-7006",
+  "flags": "",
+  "formerNames": [],
+  "filings": {
+    "recent": {
+      "accessionNumber": ["0001185185-26-000039", "9999999995-25-003322", "0001185185-25-001660", "0001185185-25-001298", "0001185185-25-001282", "0001185185-25-001242", "0001185185-25-001141", "0001185185-25-001051", "0001185185-25-000796", "0001185185-25-000604"],
+      "filingDate": ["2026-01-06", "2025-11-19", "2025-11-12", "2025-09-29", "2025-09-25", "2025-09-22", "2025-09-08", "2025-08-21", "2025-07-16", "2025-06-10"],
+      "reportDate": ["", "", "", "", "", "", "", "", "", ""],
+      "acceptanceDateTime": ["2026-01-06T20:07:01.000Z", "2025-11-20T05:15:18.000Z", "2025-11-12T11:07:03.000Z", "2025-09-29T20:16:20.000Z", "2025-09-25T17:55:58.000Z", "2025-09-22T17:53:24.000Z", "2025-09-08T15:58:22.000Z", "2025-08-21T16:50:42.000Z", "2025-07-16T18:42:15.000Z", "2025-06-10T15:29:32.000Z"],
+      "act": ["NE", "33", "33", "34", "33", "33", "33", "33", "33", "33"],
+      "form": ["RW", "EFFECT", "F-1/A", "FWP", "F-1/A", "F-1/A", "F-1/A", "F-1", "DRS/A", "DRS"],
+      "fileNumber": ["333-289757", "333-289757", "333-289757", "333-289757", "333-289757", "333-289757", "333-289757", "333-289757", "377-08092", "377-08092"],
+      "filmNumber": ["26510945", "251500892", "251468269", "251356248", "251342750", "251329524", "251299187", "251239630", "251127100", "251036342"],
+      "items": ["", ",,", "", "", "", "", "", "", "", ""],
+      "core_type": ["RW", "EFFECT", "F-1/A", "FWP", "F-1/A", "F-1/A", "F-1/A", "F-1", "DRS/A", "DRS"],
+      "size": [10600, 1932, 120589, 8702020, 1966246, 1954960, 2279591, 4809219, 1947789, 1887727],
+      "isXBRL": [0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+      "isInlineXBRL": [0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+      "primaryDocument": ["aldrw010526.htm", "xslEFFECTX01/primary_doc.xml", "altechdigf1a4111125.htm", "altechdigfwp092925.htm", "altechdigf1a3092525.htm", "altechdigf1a2091925.htm", "altechdigf1a1090525.htm", "altechdigf1080225.htm", "filename1.htm", "filename1.htm"],
+      "primaryDocDescription": ["FORM RW", "", "FORM F-1/A4", "FORM FWP", "FORM F-1/A", "FORM F-1/A", "FORM F-1/A", "FORM F-1", "", ""]
+    },
+    "files": []
+  }
+}

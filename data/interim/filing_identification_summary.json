@@ -1,0 +1,65 @@
+{
+  "input_file": "data/interim/deals_with_cik_verified.rds",
+  "output_file": "data/interim/deals_with_filings.rds",
+  "processing_date": "2026-01-28 17:11:59.956188",
+  "configuration": {
+    "minimum_lag_days": 30,
+    "allow_amendments": false,
+    "enable_fallback": true
+  },
+  "input_counts": {
+    "n_total_deals": 8986,
+    "n_with_cik": 1238,
+    "n_unique_ciks": 900
+  },
+  "edgar_query_stats": {
+    "n_queried": 900,
+    "n_successful": 900,
+    "n_failed": 0,
+    "pct_successful": 100,
+    "failed_ciks": []
+  },
+  "filing_counts": {
+    "n_total_filings": 574154,
+    "n_10k_filings": 7088
+  },
+  "match_statistics": {
+    "n_matched": 267,
+    "n_matched_primary": 249,
+    "n_matched_fallback": 18,
+    "n_unmatched": 971,
+    "pct_matched": 21.6,
+    "status_breakdown": [
+      {
+        "filing_selection_status": "no_10k_filings",
+        "n": 968,
+        "pct": 78.2
+      },
+      {
+        "filing_selection_status": "matched_primary",
+        "n": 249,
+        "pct": 20.1
+      },
+      {
+        "filing_selection_status": "matched_fallback",
+        "n": 18,
+        "pct": 1.5
+      },
+      {
+        "filing_selection_status": "no_qualifying_filing",
+        "n": 3,
+        "pct": 0.2
+      }
+    ]
+  },
+  "timing_statistics": [
+    {
+      "min_days": 33,
+      "q25": 141,
+      "median": 225,
+      "q75": 315,
+      "max_days": 5429,
+      "mean_days": 302
+    }
+  ]
+}

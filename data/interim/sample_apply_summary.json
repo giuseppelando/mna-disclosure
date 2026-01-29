@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-01-29 19:40:44.085179",
+  "input_file": "data/interim/deals_ingested.rds",
+  "output_file": "data/interim/deals_sample.rds",
+  "n_initial": 8239,
+  "n_final": 7496,
+  "retention_pct": 91,
+  "filters_applied": 6
+}

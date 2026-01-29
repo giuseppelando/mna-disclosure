@@ -1,0 +1,47 @@
+=======================================================================
+SAMPLE RESTRICTION CASCADE FLOWCHART
+=======================================================================
+
+Starting sample: 10131 deals
+
+    |
+    v
+[ Target has ticker symbol or company name ]
+    Excluded: 138 deals
+    Remaining: 9993 deals (98.6% of start)
+
+    |
+    v
+[ Non-missing announcement date ]
+    Excluded: 221 deals
+    Remaining: 9772 deals (96.5% of start)
+
+    |
+    v
+[ Deal status is Completed or Withdrawn ]
+    Excluded: 667 deals
+    Remaining: 9105 deals (89.9% of start)
+
+    |
+    v
+[ Transaction constitutes control transfer (stake >= 50% or acquisition/merger type) ]
+    Excluded: 119 deals
+    Remaining: 8986 deals (88.7% of start)
+
+    |
+    v
+[ Completion/withdrawal date not before announcement date ]
+    Excluded: 0 deals
+    Remaining: 8986 deals (88.7% of start)
+
+    |
+    v
+[ Non-negative deal value and offer price (where non-missing) ]
+    Excluded: 0 deals
+    Remaining: 8986 deals (88.7% of start)
+
+    |
+    v
+Final analytical sample: 8986 deals (88.7% retention)
+
+=======================================================================

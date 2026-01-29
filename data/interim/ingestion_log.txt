@@ -1,0 +1,62 @@
+[2026-01-29 01:53:25] [INFO] ======================================================================
+[2026-01-29 01:53:25] [INFO] M&A DATA INGESTION - FINAL VERSION
+[2026-01-29 01:53:25] [INFO] ======================================================================
+[2026-01-29 01:53:25] [INFO] 
+[2026-01-29 01:53:25] [INFO] STEP 1: Loading column mapping...
+[2026-01-29 01:53:25] [INFO] ----------------------------------------------------------------------
+[2026-01-29 01:53:25] [INFO] Loaded mapping for 48 columns
+[2026-01-29 01:53:25] [INFO] Will keep 48 columns
+[2026-01-29 01:53:25] [INFO] 
+[2026-01-29 01:53:25] [INFO] STEP 2: Loading raw data...
+[2026-01-29 01:53:25] [INFO] ----------------------------------------------------------------------
+[2026-01-29 01:53:25] [INFO] Input: Deals_v1a.xlsx
+[2026-01-29 01:53:25] [INFO] Loaded: 8239 rows × 48 columns
+[2026-01-29 01:53:25] [INFO] 
+[2026-01-29 01:53:25] [INFO] STEP 3: Renaming columns...
+[2026-01-29 01:53:25] [INFO] ----------------------------------------------------------------------
+[2026-01-29 01:53:25] [DEBUG] Duplicate 'target_ticker': keeping target_primary_ticker_symbol
+[2026-01-29 01:53:25] [INFO] Selected 47 columns
+[2026-01-29 01:53:25] [INFO] Renamed 5 columns
+[2026-01-29 01:53:25] [INFO] 
+[2026-01-29 01:53:25] [INFO] STEP 4: Converting data types (schema enforcement)...
+[2026-01-29 01:53:25] [INFO] ----------------------------------------------------------------------
+[2026-01-29 01:53:25] [DEBUG]   date_announced: POSIXct/POSIXt -> Date, parsed=8239
+[2026-01-29 01:53:25] [DEBUG]   date_effective: POSIXct/POSIXt -> Date, parsed=8239
+[2026-01-29 01:53:25] [DEBUG]   date_withdrawn: logical -> Date, parsed=0
+[2026-01-29 01:53:25] [DEBUG]   rank_date: POSIXct/POSIXt -> Date, parsed=8239
+[2026-01-29 01:53:25] [DEBUG]   number_of_days_between_date_announced_and_date_effective: numeric -> integer, nonmiss=8239, range=[0,5874]
+[2026-01-29 01:53:25] [DEBUG]   consideration_price_per_share_usd: character -> numeric, numeric=1775
+[2026-01-29 01:53:25] [INFO] Type conversion complete (schema enforced)
+[2026-01-29 01:53:25] [INFO] 
+[2026-01-29 01:53:25] [INFO] STEP 5: Removing duplicates...
+[2026-01-29 01:53:25] [INFO] ----------------------------------------------------------------------
+[2026-01-29 01:53:25] [INFO] Removed 0 duplicates
+[2026-01-29 01:53:25] [INFO] Final: 8239 unique deals
+[2026-01-29 01:53:25] [INFO] 
+[2026-01-29 01:53:25] [INFO] STEP 6: Creating derived variables...
+[2026-01-29 01:53:25] [INFO] ----------------------------------------------------------------------
+[2026-01-29 01:53:25] [DEBUG] Created: deal_completed, deal_outcome_terminal
+[2026-01-29 01:53:25] [DEBUG] Created: time_to_close
+[2026-01-29 01:53:25] [DEBUG] Created: year_announced, month_announced
+[2026-01-29 01:53:25] [DEBUG] Created: payment_method_clean
+[2026-01-29 01:53:25] [INFO] Final dataset: 8239 rows × 53 columns
+[2026-01-29 01:53:25] [INFO] 
+[2026-01-29 01:53:25] [INFO] STEP 7: Creating sample filter flags...
+[2026-01-29 01:53:25] [INFO] ----------------------------------------------------------------------
+[2026-01-29 01:53:25] [INFO] Flags created:
+[2026-01-29 01:53:25] [DEBUG]   flag_has_deal_id: 8239 (100%)
+[2026-01-29 01:53:25] [DEBUG]   flag_has_target_name: 8239 (100%)
+[2026-01-29 01:53:25] [DEBUG]   flag_has_announce_date: 8239 (100%)
+[2026-01-29 01:53:25] [DEBUG]   flag_terminal_outcome: 8239 (100%)
+[2026-01-29 01:53:25] [DEBUG]   flag_has_premium_inputs: 8239 (100%)
+[2026-01-29 01:53:25] [INFO] 
+[2026-01-29 01:53:25] [INFO] STEP 8: Saving outputs...
+[2026-01-29 01:53:25] [INFO] ----------------------------------------------------------------------
+[2026-01-29 01:53:25] [INFO] Saved: data/interim/deals_ingested.rds
+[2026-01-29 01:53:25] [INFO] Saved: data/interim/kept_columns.csv
+[2026-01-29 01:53:25] [INFO] Saved: data/interim/ingestion_summary.json
+[2026-01-29 01:53:25] [INFO] 
+[2026-01-29 01:53:25] [INFO] ======================================================================
+[2026-01-29 01:53:25] [INFO] INGESTION COMPLETE
+[2026-01-29 01:53:25] [INFO] Dataset: 8239 deals × 58 columns
+[2026-01-29 01:53:25] [INFO] ======================================================================

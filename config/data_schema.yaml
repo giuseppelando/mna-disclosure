@@ -1,0 +1,401 @@
+# =============================================================================
+# config/data_schema.yaml
+# =============================================================================
+# Defines expected structure and validation rules for M&A deal data
+# 
+# This schema supports flexible data ingestion from various sources (SDC, 
+# Refinitiv, etc.) while maintaining consistent internal representation.
+#
+# Usage: Read with yaml::read_yaml("config/data_schema.yaml")
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# COLUMN MAPPING
+# -----------------------------------------------------------------------------
+# Maps common variations of column names from source data to standardized
+# internal names. Add new mappings as needed for different data sources.
+# 
+# Format:
+#   standard_name:
+#     source_names: [list of possible names in raw data]
+#     required: true/false
+#     type: character/numeric/date/integer
+#     description: human-readable description
+# -----------------------------------------------------------------------------
+
+columns:
+  
+  # Core identifiers
+  deal_id:
+    source_names: 
+      - "deal_number"
+      - "deal_id"
+      - "dealid"
+      - "transaction_id"
+      - "sdc_deal_no"
+    required: true
+    type: character
+    description: "Unique deal identifier from source database"
+  
+  target_name:
+    source_names:
+      - "target_name"
+      - "target_company_name"
+      - "targetname"
+      - "target_full_name"
+    required: true
+    type: character
+    description: "Legal name of target company"
+  
+  acquirer_name:
+    source_names:
+      - "acquiror_name"
+      - "acquirer_name"
+      - "acquirername"
+      - "buyer_name"
+      - "acquiror_full_name"
+    required: false
+    type: character
+    description: "Legal name of acquiring company"
+  
+  target_ticker:
+    source_names:
+      - "target_ticker_symbol"
+      - "target_ticker"
+      - "ticker"
+      - "target_trading_symbol"
+      - "target_primary_ticker_symbol"
+    required: false  # Many deals may not have public ticker
+    type: character
+    description: "Stock ticker symbol of target"
+  
+  target_isin:
+    source_names:
+      - "target_isin_number"
+      - "target_isin"
+      - "isin"
+    required: false
+    type: character
+    description: "ISIN identifier of target"
+  
+  # Dates
+  announce_date:
+    source_names:
+      - "announced_date"
+      - "announce_date"
+      - "announcement_date"
+      - "date_announced"
+    required: true
+    type: date
+    description: "Date deal was publicly announced"
+    validation:
+      min_date: "1990-01-01"  # Reasonable bounds for US M&A research
+      max_date: "2025-12-31"
+  
+  complete_date:
+    source_names:
+      - "completed_date"
+      - "complete_date"
+      - "completion_date"
+      - "effective_date"
+      - "date_effective_unconditional"
+    required: false
+    type: date
+    description: "Date deal was completed (closed)"
+    validation:
+      min_date: "1990-01-01"
+  
+  withdrawn_date:
+    source_names:
+      - "withdrawn_date"
+      - "termination_date"
+      - "date_withdrawn"
+    required: false
+    type: date
+    description: "Date deal was withdrawn/terminated"
+  
+  expected_complete_date:
+    source_names:
+      - "expected_completion_date"
+      - "expected_complete_date"
+    required: false
+    type: date
+    description: "Expected completion date"
+  
+  assumed_complete_date:
+    source_names:
+      - "assumed_completion_date"
+      - "assumed_complete_date"
+    required: false
+    type: date
+    description: "Assumed completion date"
+  
+  # Deal characteristics
+  deal_status:
+    source_names:
+      - "deal_status"
+      - "status"
+      - "transaction_status"
+    required: false
+    type: character
+    description: "Deal status (Completed, Withdrawn, Pending, etc.)"
+    validation:
+      allowed_values:
+        - "Completed"
+        - "Withdrawn"
+        - "Pending"
+        - "Intended"
+        - "Rumored"
+        # Add variations as discovered
+  
+  deal_type:
+    source_names:
+      - "deal_type"
+      - "transaction_type"
+      - "type"
+    required: false
+    type: character
+    description: "Type of transaction (Acquisition 100%, Merger, etc.)"
+  
+  payment_method:
+    source_names:
+      - "deal_method_of_payment"
+      - "payment_method"
+      - "consideration_type"
+      - "consideration_structure"
+    required: false
+    type: character
+    description: "Method of payment (Cash, Shares, Liabilities, Mixed)"
+  
+  deal_value_eur_th:
+    source_names:
+      - "deal_value_th_eur"
+      - "deal_value_eur_th"
+      - "transaction_value_eur"
+      - "value_eur_thousands"
+      - "rank_value_including_net_debt_of_target_usd_millions"
+    required: false
+    type: numeric
+    description: "Deal value in thousands of EUR (note: USD millions if from rank_value field)"
+    validation:
+      min_value: 0
+      max_value: 1000000000  # 1 trillion EUR = sanity check
+      allow_na: true
+  
+  offer_price_eur:
+    source_names:
+      - "offer_price_eur"
+      - "price_per_share_eur"
+    required: false
+    type: numeric
+    description: "Offer price per share in EUR"
+    validation:
+      min_value: 0
+      allow_na: true
+  
+  initial_stake_pct:
+    source_names:
+      - "initial_stake_percent"
+      - "initial_stake_pct"
+      - "initial_ownership_pct"
+      - "percent_of_shares_owned_before_transaction"
+    required: false
+    type: numeric
+    description: "Acquirer's ownership % before deal"
+    validation:
+      min_value: 0
+      max_value: 100
+      allow_na: true
+  
+  final_stake_pct:
+    source_names:
+      - "final_stake_percent"
+      - "final_stake_pct"
+      - "final_ownership_pct"
+      - "percent_of_shares_acquired"
+    required: false
+    type: numeric
+    description: "Acquirer's ownership % after deal (if completed)"
+    validation:
+      min_value: 0
+      max_value: 100
+      allow_na: true
+  
+  # Industry and geography
+  target_sic:
+    source_names:
+      - "target_us_sic_code_s"
+      - "target_sic"
+      - "sic_code"
+      - "target_primary_us_sic_code"
+    required: false
+    type: character
+    description: "Target SIC code(s) - may be multiple separated by /"
+  
+  target_exchange:
+    source_names:
+      - "target_stock_exchange_s_listed"
+      - "target_exchange"
+      - "exchange"
+      - "target_primary_stock_exchange"
+    required: false
+    type: character
+    description: "Stock exchange(s) where target is listed"
+  
+  acquirer_country:
+    source_names:
+      - "acquiror_country_code"
+      - "acquirer_country"
+      - "buyer_country"
+      - "acquiror_nation"
+    required: false
+    type: character
+    description: "Country code of acquirer (ISO 2-letter)"
+  
+  acquirer_sic:
+    source_names:
+      - "acquiror_primary_us_sic_code"
+      - "acquirer_sic"
+      - "acquiror_sic"
+    required: false
+    type: character
+    description: "Acquirer SIC code"
+  
+  target_nation:
+    source_names:
+      - "target_nation"
+      - "target_country"
+    required: false
+    type: character
+    description: "Target nation/country"
+  
+  target_public_status:
+    source_names:
+      - "target_public_status"
+    required: false
+    type: character
+    description: "Target public listing status"
+  
+  target_cusip:
+    source_names:
+      - "target_cusip"
+    required: false
+    type: character
+    description: "Target CUSIP identifier"
+
+# -----------------------------------------------------------------------------
+# DERIVED VARIABLES
+# -----------------------------------------------------------------------------
+# Variables computed from source columns after ingestion
+# These are created by src/10_ingest/read_deals.R
+# -----------------------------------------------------------------------------
+
+derived_variables:
+  
+  deal_completed:
+    formula: "if_else(str_to_lower(str_trim(deal_status)) == 'completed', 1L, 0L)"
+    type: integer
+    description: "Binary indicator: 1 if deal completed, 0 otherwise"
+    validation:
+      allowed_values: [0, 1]
+  
+  target_sic_primary:
+    formula: "str_extract(target_sic, '^\\\\d{4}')"
+    type: character
+    description: "First 4-digit SIC code (many deals have multiple)"
+    validation:
+      pattern: "^\\d{4}$|^NA$"
+  
+  target_sic_2digit:
+    formula: "str_sub(target_sic_primary, 1, 2)"
+    type: character
+    description: "2-digit SIC code for industry grouping"
+    validation:
+      pattern: "^\\d{2}$|^NA$"
+
+# -----------------------------------------------------------------------------
+# DATA QUALITY RULES
+# -----------------------------------------------------------------------------
+# Validation rules applied after data ingestion to flag anomalies
+# Non-fatal: issues logged but don't stop processing
+# -----------------------------------------------------------------------------
+
+quality_checks:
+  
+  date_consistency:
+    description: "Check logical date orderings"
+    rules:
+      - check: "complete_date >= announce_date"
+        severity: "error"
+        message: "Completion date cannot precede announcement date"
+      
+      - check: "withdrawn_date >= announce_date"
+        severity: "error"
+        message: "Withdrawal date cannot precede announcement date"
+      
+      - check: "announce_date >= (complete_date - 365*5)"
+        severity: "warning"
+        message: "Deal took > 5 years to complete (verify dates)"
+  
+  stake_consistency:
+    description: "Check ownership percentages"
+    rules:
+      - check: "final_stake_pct >= initial_stake_pct"
+        severity: "warning"
+        message: "Final stake less than initial (divestiture?)"
+      
+      - check: "(initial_stake_pct > 0 & final_stake_pct == 100) | initial_stake_pct == 0"
+        severity: "info"
+        message: "Partial initial stake exists"
+  
+  value_sanity:
+    description: "Check deal value reasonableness"
+    rules:
+      - check: "deal_value_eur_th > 0 | is.na(deal_value_eur_th)"
+        severity: "error"
+        message: "Negative deal value"
+      
+      - check: "offer_price_eur > 0 | is.na(offer_price_eur)"
+        severity: "error"
+        message: "Negative offer price"
+
+# -----------------------------------------------------------------------------
+# PROCESSING OPTIONS
+# -----------------------------------------------------------------------------
+
+processing:
+  
+  # How to handle missing required fields
+  missing_required_action: "error"  # "error", "warn", "skip"
+  
+  # How to handle unknown source columns
+  unknown_columns_action: "warn"  # "error", "warn", "ignore"
+  
+  # Encoding
+  default_encoding: "UTF-8"
+  
+  # Numeric cleaning
+  remove_thousand_separators: true
+  decimal_separator: "."
+  
+  # Date parsing
+  date_formats:
+    - "%Y-%m-%d"
+    - "%d/%m/%Y"
+    - "%m/%d/%Y"
+    - "%Y%m%d"
+  
+  # String cleaning
+  trim_whitespace: true
+  uppercase_tickers: true
+
+# -----------------------------------------------------------------------------
+# OUTPUT SPECIFICATION
+# -----------------------------------------------------------------------------
+
+output:
+  file: "data/interim/deals_clean.csv"
+  format: "csv"
+  include_source_columns: false  # Keep only standardized names
+  encoding: "UTF-8"
+  na_string: "NA"

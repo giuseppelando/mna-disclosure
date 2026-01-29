@@ -1,0 +1,245 @@
+# =============================================================================
+# config/filing_params.yaml
+# =============================================================================
+# Configuration for SEC filing retrieval and selection
+# 
+# Defines parameters for:
+# - Filing window specifications
+# - Form type priorities
+# - Download thresholds
+# - Rate limiting
+#
+# Multiple scenarios supported for robustness checks
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# SEC API SETTINGS
+# -----------------------------------------------------------------------------
+
+sec_api:
+  user_agent: "Giuseppe Lando <giuseppe.lando@studbocconi.it> ; M&A Disclosure Thesis"
+  base_url: "https://data.sec.gov"
+  rate_limit_delay_sec: 0.5  # Delay between requests (SEC guidelines: 10 req/sec max)
+  bulk_ticker_url: "https://www.sec.gov/files/company_tickers.json"
+
+# -----------------------------------------------------------------------------
+# FILING SCENARIOS
+# -----------------------------------------------------------------------------
+# Define multiple parameter sets for main analysis + robustness checks
+# Select scenario with: --scenario baseline (or sensitivity_short, etc.)
+# -----------------------------------------------------------------------------
+
+scenarios:
+  
+  # Main analysis specification
+  baseline:
+    description: "Primary specification: 6-month pre-announcement window"
+    
+    # Filing window definition
+    filing_window_days: 180  # Pre-announcement window [-180, -1] days
+    
+    # Which form types to retrieve (pre-announcement periodic filings)
+    form_types:
+      - "10-K"   # Annual report (most comprehensive MD&A)
+      - "10-Q"   # Quarterly report
+      - "20-F"   # Annual report for foreign issuers
+      - "6-K"    # Foreign issuer current report
+    
+    # Form selection priority (higher priority = selected first)
+    # Rationale: Annual reports (10-K, 20-F) contain most comprehensive
+    # MD&A and Risk Factor disclosures (Beuselinck et al. 2023)
+    form_priority:
+      "10-K": 100
+      "20-F": 100
+      "10-Q": 50
+      "6-K": 50
+    
+    # Maximum documents per issuer (cap to manage data volume)
+    max_docs_per_issuer: 6
+    
+    # Minimum file size (bytes) to exclude error pages / redirects
+    min_file_size_bytes: 1500
+    
+    # Date range constraints
+    min_filing_date: "1990-01-01"  # Reasonable lower bound for US M&A data
+    max_filing_date: null           # Null = no upper bound (use latest available)
+    
+    # Filing lag validation
+    # Warn if selected filing is older than this many days before announcement
+    max_acceptable_lag_days: 270  # ~9 months (allow for annual filer + small lag)
+  
+  # Sensitivity: shorter window
+  sensitivity_short:
+    description: "Robustness check: 3-month window"
+    filing_window_days: 90
+    form_types: ["10-K", "10-Q", "20-F", "6-K"]
+    form_priority:
+      "10-K": 100
+      "20-F": 100
+      "10-Q": 50
+      "6-K": 50
+    max_docs_per_issuer: 6
+    min_file_size_bytes: 1500
+    max_acceptable_lag_days: 270
+  
+  # Sensitivity: longer window
+  sensitivity_long:
+    description: "Robustness check: 9-month window"
+    filing_window_days: 270
+    form_types: ["10-K", "10-Q", "20-F", "6-K"]
+    form_priority:
+      "10-K": 100
+      "20-F": 100
+      "10-Q": 50
+      "6-K": 50
+    max_docs_per_issuer: 6
+    min_file_size_bytes: 1500
+    max_acceptable_lag_days: 365
+  
+  # Sensitivity: 10-K only (most conservative)
+  sensitivity_annual_only:
+    description: "Robustness check: Annual reports only"
+    filing_window_days: 365  # Extended window to ensure capture
+    form_types: ["10-K", "20-F"]
+    form_priority:
+      "10-K": 100
+      "20-F": 100
+    max_docs_per_issuer: 2  # Expect max 1-2 annual reports per year
+    min_file_size_bytes: 1500
+    max_acceptable_lag_days: 365
+  
+  # Sensitivity: prioritize most recent (regardless of form type)
+  sensitivity_most_recent:
+    description: "Robustness check: Most recent filing prioritized"
+    filing_window_days: 180
+    form_types: ["10-K", "10-Q", "20-F", "6-K"]
+    form_priority:
+      "10-K": 50   # Equal priority - selection by recency only
+      "20-F": 50
+      "10-Q": 50
+      "6-K": 50
+    max_docs_per_issuer: 6
+    min_file_size_bytes: 1500
+    max_acceptable_lag_days: 270
+
+# -----------------------------------------------------------------------------
+# FILING SELECTION LOGIC
+# -----------------------------------------------------------------------------
+
+selection_rules:
+  
+  # Primary selection strategy
+  # Options: "priority_then_recency", "recency_only", "most_comprehensive"
+  strategy: "priority_then_recency"
+  
+  # If multiple filings of same form type exist, prefer:
+  # Options: "most_recent", "most_comprehensive" (by file size)
+  tiebreaker: "most_recent"
+  
+  # Should 8-K earnings announcements be included?
+  # (Requires content-based filtering for Item 2.02)
+  include_8k_earnings: false
+  
+  # Handling of amended filings (10-K/A, 10-Q/A)
+  amended_filing_preference: "prefer_amended"  # "prefer_amended", "prefer_original", "take_both"
+
+# -----------------------------------------------------------------------------
+# CACHING SETTINGS
+# -----------------------------------------------------------------------------
+
+caching:
+  
+  # Cache SEC submissions JSON locally
+  cache_submissions: true
+  submissions_cache_dir: "data/interim/submissions_cache"
+  
+  # Cache downloaded HTML filings
+  cache_filings: true
+  filings_cache_dir: "data/raw/filings"
+  
+  # How long to keep cached data (days)
+  # Null = keep forever (recommended for reproducibility)
+  cache_expiry_days: null
+  
+  # Re-download if file exists but is smaller than this
+  redownload_if_smaller_than_bytes: 1000
+
+# -----------------------------------------------------------------------------
+# OUTPUT AND LOGGING
+# -----------------------------------------------------------------------------
+
+output:
+  
+  # Detailed filing selection log
+  filing_log_path: "data/interim/filing_selection_log.csv"
+  filing_log_columns:
+    - deal_id
+    - target_ticker
+    - cik
+    - announce_date
+    - form_type
+    - filing_date
+    - accession_number
+    - primary_document
+    - file_url
+    - local_path
+    - file_size_bytes
+    - selected_reason
+  
+  # Summary statistics
+  summary_stats_path: "data/interim/filing_summary_stats.json"
+  summary_stats_include:
+    - total_deals
+    - deals_with_filings
+    - deals_without_filings
+    - median_days_to_filing
+    - mean_days_to_filing
+    - pct_with_10k
+    - pct_with_10q
+    - pct_with_20f
+    - form_type_distribution
+  
+  # Processing log (success/failure per deal)
+  processing_log_path: "data/interim/filing_processing_log.csv"
+  
+  # File naming convention
+  # Template variables: {ticker}, {form}, {filing_date}, {cik}, {accession}
+  filename_template: "{ticker}_{form}_{filing_date}.html"
+
+# -----------------------------------------------------------------------------
+# ERROR HANDLING
+# -----------------------------------------------------------------------------
+
+error_handling:
+  
+  # What to do if no filings found in window
+  no_filings_action: "warn_and_log"  # "error", "warn_and_log", "skip_silently"
+  
+  # What to do if filing download fails
+  download_failure_action: "log_and_continue"  # "error", "log_and_continue", "retry"
+  
+  # Number of retry attempts for failed downloads
+  max_retries: 3
+  retry_delay_sec: 2.0
+  
+  # What to do if CIK missing for deal
+  missing_cik_action: "warn_and_skip"  # "error", "warn_and_skip", "skip_silently"
+
+# -----------------------------------------------------------------------------
+# VALIDATION RULES
+# -----------------------------------------------------------------------------
+
+validation:
+  
+  # Flag deals with unusually long filing lag
+  flag_if_filing_lag_exceeds_days: 270
+  
+  # Flag if selected filing is after announcement (should never happen)
+  flag_if_filing_after_announcement: true
+  
+  # Flag if multiple 10-K forms in window (unusual for annual filer)
+  flag_if_multiple_annual_filings: true
+  
+  # Minimum CIK length (should be 10 digits, zero-padded)
+  cik_format_check: true
+  cik_expected_length: 10
