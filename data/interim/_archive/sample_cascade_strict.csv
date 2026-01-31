@@ -1,0 +1,9 @@
+"step","description","n_before","n_after","n_removed","pct_retained"
+"0","Initial sample",8239,8239,0,100
+"1","Terminal outcomes",8239,8239,0,100
+"2","Control transfer ≥50%",8239,5463,2776,66.3
+"3","US public targets",5463,5463,0,66.3
+"4","Premium calculable",5463,4042,1421,49.1
+"5","Payment method present",4042,3910,132,47.5
+"6","Deal value ≥ $10M",3910,3787,123,46
+"7","Period 2006-2023",3787,3440,347,41.8

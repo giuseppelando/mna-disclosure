@@ -1,0 +1,79 @@
+[2026-01-30 23:36:10] [INFO] ======================================================================
+[2026-01-30 23:36:10] [INFO] STRICT SAMPLE RESTRICTION CASCADE
+[2026-01-30 23:36:10] [INFO] ======================================================================
+[2026-01-30 23:36:10] [INFO] 
+[2026-01-30 23:36:10] [INFO] STEP 1: Loading data...
+[2026-01-30 23:36:10] [INFO] ----------------------------------------------------------------------
+[2026-01-30 23:36:10] [INFO] Loaded: deals_ingested.rds
+[2026-01-30 23:36:10] [INFO] Starting sample: 8239 deals
+[2026-01-30 23:36:10] [INFO] Columns: 58
+[2026-01-30 23:36:10] [INFO] 
+[2026-01-30 23:36:10] [INFO] STEP 2: Identifying key columns...
+[2026-01-30 23:36:10] [INFO] ----------------------------------------------------------------------
+[2026-01-30 23:36:10] [INFO] Found final stake: percentage_of_shares_acquired_in_transaction
+[2026-01-30 23:36:10] [INFO] Found deal value: deal_value_usd_millions
+[2026-01-30 23:36:10] [INFO] 
+[2026-01-30 23:36:10] [INFO] STEP 3: Applying STRICT restriction cascade...
+[2026-01-30 23:36:10] [INFO] ----------------------------------------------------------------------
+[2026-01-30 23:36:10] [INFO] 
+[2026-01-30 23:36:10] [INFO] FILTER 1: Terminal outcomes only...
+[2026-01-30 23:36:10] [INFO]   Removed: 0  |  Remaining: 8239
+[2026-01-30 23:36:10] [INFO] 
+[2026-01-30 23:36:10] [INFO] FILTER 2: Control transfer (≥50%)...
+[2026-01-30 23:36:10] [INFO]   Removed: 2776  |  Remaining: 5463
+[2026-01-30 23:36:10] [INFO] 
+[2026-01-30 23:36:10] [INFO] FILTER 3: US public targets...
+[2026-01-30 23:36:10] [INFO]   Removed: 0  |  Remaining: 5463
+[2026-01-30 23:36:10] [INFO] 
+[2026-01-30 23:36:10] [INFO] FILTER 4: Premium calculable...
+[2026-01-30 23:36:10] [INFO]   Removed: 1421  |  Remaining: 4042
+[2026-01-30 23:36:10] [INFO] 
+[2026-01-30 23:36:10] [INFO] FILTER 5: Payment method present...
+[2026-01-30 23:36:10] [INFO]   Removed: 132  |  Remaining: 3910
+[2026-01-30 23:36:10] [INFO] 
+[2026-01-30 23:36:10] [INFO] FILTER 6: Deal value ≥ $10M...
+[2026-01-30 23:36:10] [INFO]   Removed: 123  |  Remaining: 3787
+[2026-01-30 23:36:10] [INFO] 
+[2026-01-30 23:36:10] [INFO] FILTER 7: Period 2006-2023...
+[2026-01-30 23:36:10] [INFO]   Removed: 347  |  Remaining: 3440
+[2026-01-30 23:36:10] [INFO] 
+[2026-01-30 23:36:10] [INFO] STEP 4: Preparing for manual CIK matching...
+[2026-01-30 23:36:10] [INFO] ----------------------------------------------------------------------
+[2026-01-30 23:36:10] [INFO] Added target_cik column (empty)
+[2026-01-30 23:36:10] [INFO] Sorted by target_name
+[2026-01-30 23:36:10] [INFO] 
+[2026-01-30 23:36:10] [INFO] STEP 5: Saving outputs...
+[2026-01-30 23:36:10] [INFO] ----------------------------------------------------------------------
+[2026-01-30 23:36:10] [INFO] ✓ Saved: data/processed/deals_restricted.rds
+[2026-01-30 23:36:10] [INFO]   Rows: 3440  |  Columns: 59
+[2026-01-30 23:36:10] [INFO] ✓ Saved: data/processed/deals_restricted.xlsx
+[2026-01-30 23:36:10] [INFO]   Format: Excel (for manual CIK matching)
+[2026-01-30 23:36:10] [INFO]   Columns: 59 (same as RDS)
+[2026-01-30 23:36:10] [INFO] ✓ Saved: data/interim/sample_cascade_strict.csv
+[2026-01-30 23:36:10] [INFO] 
+[2026-01-30 23:36:10] [INFO] ======================================================================
+[2026-01-30 23:36:10] [INFO] STRICT RESTRICTION CASCADE COMPLETE
+[2026-01-30 23:36:10] [INFO] ======================================================================
+[2026-01-30 23:36:10] [INFO] 
+[2026-01-30 23:36:10] [INFO] Cascade summary:
+[2026-01-30 23:36:10] [INFO]   F1: Terminal outcomes
+[2026-01-30 23:36:10] [INFO]       Removed: 0  |  Retained: 100%
+[2026-01-30 23:36:10] [INFO]   F2: Control transfer ≥50%
+[2026-01-30 23:36:10] [INFO]       Removed: 2776  |  Retained: 66.3%
+[2026-01-30 23:36:10] [INFO]   F3: US public targets
+[2026-01-30 23:36:10] [INFO]       Removed: 0  |  Retained: 66.3%
+[2026-01-30 23:36:10] [INFO]   F4: Premium calculable
+[2026-01-30 23:36:10] [INFO]       Removed: 1421  |  Retained: 49.1%
+[2026-01-30 23:36:10] [INFO]   F5: Payment method present
+[2026-01-30 23:36:10] [INFO]       Removed: 132  |  Retained: 47.5%
+[2026-01-30 23:36:10] [INFO]   F6: Deal value ≥ $10M
+[2026-01-30 23:36:10] [INFO]       Removed: 123  |  Retained: 46%
+[2026-01-30 23:36:10] [INFO]   F7: Period 2006-2023
+[2026-01-30 23:36:10] [INFO]       Removed: 347  |  Retained: 41.8%
+[2026-01-30 23:36:10] [INFO] 
+[2026-01-30 23:36:10] [INFO] Final sample: 3440 deals (41.8% retention)
+[2026-01-30 23:36:10] [INFO] 
+[2026-01-30 23:36:10] [INFO] Quality checks:
+[2026-01-30 23:36:10] [INFO]   Deal value - Min: $10M
+[2026-01-30 23:36:10] [INFO]   Deal value - Median: $467.6M
+[2026-01-30 23:36:10] [INFO]   Year range: 2006 - 2022

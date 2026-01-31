@@ -1,0 +1,82 @@
+======================================================================
+COLUMN ANALYSIS REPORT FOR M&A RESEARCH
+======================================================================
+
+Input file: Deals_v3.xlsx
+Analysis date: 2026-01-30
+Total columns: 48
+
+SUMMARY BY CONSTRUCT
+----------------------------------------------------------------------
+date_announcement                        [CRITICAL]:   6 columns
+outcome_premium_input                    [CRITICAL]:   5 columns
+control_industry                         [  MEDIUM]:   4 columns
+control_payment                          [    HIGH]:   4 columns
+moderator_deal                           [  MEDIUM]:   4 columns
+identifier_acquirer                      [    HIGH]:   3 columns
+moderator_geography                      [  MEDIUM]:   3 columns
+control_deal_value                       [    HIGH]:   2 columns
+identifier_target                        [CRITICAL]:   2 columns
+identifier_target                        [    HIGH]:   2 columns
+control_deal_type                        [    HIGH]:   1 columns
+control_geography                        [    HIGH]:   1 columns
+control_geography                        [  MEDIUM]:   1 columns
+control_industry                         [    HIGH]:   1 columns
+control_public_status                    [    HIGH]:   1 columns
+date_completion                          [CRITICAL]:   1 columns
+date_withdrawn                           [    HIGH]:   1 columns
+identifier_deal                          [CRITICAL]:   1 columns
+identifier_target                        [  MEDIUM]:   1 columns
+metadata_rank                            [     LOW]:   1 columns
+moderator_related_deal                   [     LOW]:   1 columns
+outcome_completion                       [CRITICAL]:   1 columns
+
+CRITICAL COLUMNS FOR PREMIUM CALCULATION
+----------------------------------------------------------------------
+  [CRITICAL] target_share_price_1_day_prior_to_announcement_usd
+      Target stock price (premium denominator)
+      Missing: 10.4%, Unique values: 3796
+
+  [CRITICAL] target_share_price_1_week_prior_to_announcement_usd
+      Target stock price (premium denominator)
+      Missing: 10.9%, Unique values: 3719
+
+  [CRITICAL] target_share_price_4_weeks_prior_to_announcement_usd
+      Target stock price (premium denominator)
+      Missing: 11.1%, Unique values: 3728
+
+  [CRITICAL] share_price_paid_by_acquiror_for_target_shares_usd
+      Offer price (premium numerator)
+      Missing: 35.1%, Unique values: 2662
+
+  [CRITICAL] consideration_price_per_share_usd
+      Offer price (premium numerator)
+      Missing: 49.2%, Unique values: 3097
+
+
+PAYMENT METHOD COLUMNS
+----------------------------------------------------------------------
+  [HIGH] percentage_of_shares_acquired_in_transaction
+      Percentage of stock consideration
+      Missing: 0.0%, Unique values: 2327
+
+  [HIGH] percentage_of_cash
+      Percentage of cash consideration
+      Missing: 0.0%, Unique values: 1026
+
+  [HIGH] percentage_of_stock
+      Percentage of stock consideration
+      Missing: 0.0%, Unique values: 754
+
+  [HIGH] percentage_of_shares_owned_after_transaction
+      Percentage of stock consideration
+      Missing: 9.8%, Unique values: 2187
+
+
+MISSING CRITICAL CONSTRUCTS
+----------------------------------------------------------------------
+  ✓ All critical constructs present
+
+POTENTIALLY USEFUL UNMAPPED COLUMNS (Top 20)
+----------------------------------------------------------------------
+ 1. form_of_the_deal                                        [100.0% complete]
